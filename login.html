@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - DREIZZA</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -85,6 +88,7 @@
         <form id="formLogin">
 
             <label for="email">E-mail</label>
+
             <input
                 type="email"
                 id="email"
@@ -93,6 +97,7 @@
             >
 
             <label for="senha">Senha</label>
+
             <input
                 type="password"
                 id="senha"
@@ -110,6 +115,36 @@
         </div>
 
     </div>
+
+    <script>
+        const formularioLogin = document.getElementById("formLogin");
+
+        formularioLogin.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value;
+
+            if (!email || !senha) {
+                alert("Preencha o e-mail e a senha.");
+                return;
+            }
+
+            const { error } = await supabaseClient.auth.signInWithPassword({
+                email: email,
+                password: senha
+            });
+
+            if (error) {
+                alert("Não foi possível entrar: " + error.message);
+                return;
+            }
+
+            alert("Login realizado com sucesso!");
+
+            window.location.href = "index.html";
+        });
+    </script>
 
 </body>
 </html>
