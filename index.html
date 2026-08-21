@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -60,15 +59,15 @@
 
     .banner {
       position: relative;
-      min-height: 420px;
+      width: 100%;
+      min-height: 500px;
+      overflow: hidden;
+      background: #000;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      overflow: hidden;
-      background: #000;
-      color: white;
-      padding: 0;
     }
 
     .banner-video {
@@ -77,7 +76,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      background: #000;
       z-index: 0;
     }
 
@@ -85,24 +85,25 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.18);
       z-index: 1;
     }
 
     .banner-content {
       position: relative;
       z-index: 2;
-      padding: 30px;
+      padding: 20px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     .banner h1 {
       font-size: 42px;
-      margin-bottom: 15px;
+      margin: 0 0 15px;
     }
 
     .banner p {
       font-size: 18px;
-      margin-bottom: 25px;
+      margin: 0 0 25px;
     }
 
     .button {
@@ -112,6 +113,8 @@
       padding: 14px 28px;
       text-decoration: none;
       border-radius: 3px;
+      font-size: 16px;
+      text-shadow: none;
     }
 
     .button:hover {
@@ -165,6 +168,44 @@
       color: white;
     }
 
+    /* CELULAR */
+
+    @media (max-width: 767px) {
+
+      .logo img {
+        width: 150px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 13px;
+      }
+
+      .banner {
+        min-height: 520px;
+      }
+
+      .banner-video {
+        object-fit: contain;
+      }
+
+      .banner h1 {
+        font-size: 32px;
+      }
+
+      .banner p {
+        font-size: 16px;
+      }
+
+      .banner-content {
+        padding: 20px;
+      }
+
+      .button {
+        padding: 14px 25px;
+      }
+    }
+
     /* COMPUTADOR */
 
     @media (min-width: 768px) {
@@ -184,38 +225,6 @@
       .banner p {
         font-size: 20px;
       }
-
-    }
-
-    /* CELULAR */
-
-    @media (max-width: 767px) {
-
-      .logo img {
-        width: 150px;
-      }
-
-      nav a {
-        margin: 0 5px;
-        font-size: 13px;
-      }
-
-      .banner {
-        min-height: 480px;
-      }
-
-      .banner h1 {
-        font-size: 32px;
-      }
-
-      .banner p {
-        font-size: 16px;
-      }
-
-      .banner-content {
-        padding: 20px;
-      }
-
     }
 
   </style>
@@ -223,8 +232,6 @@
 </head>
 
 <body>
-
-  <!-- CABEÇALHO -->
 
   <header>
 
@@ -241,8 +248,6 @@
 
   </header>
 
-
-  <!-- BANNER COM VÍDEO -->
 
   <section class="banner">
 
@@ -267,106 +272,56 @@
 
       <h1>Nova coleção</h1>
 
-      <p>
-        Descubra seu novo estilo na DREIZZA
-      </p>
+      <p>Descubra seu novo estilo na DREIZZA</p>
 
-      <a href="#" class="button">
-        COMPRAR AGORA
-      </a>
+      <a href="#" class="button">COMPRAR AGORA</a>
 
     </div>
 
   </section>
 
-
-  <!-- PRODUTOS -->
 
   <section class="section">
 
-    <h2>
-      Produtos em destaque
-    </h2>
+    <h2>Produtos em destaque</h2>
 
     <div class="products">
 
-
       <div class="product">
-
         <div class="product-image"></div>
-
-        <h3>
-          Produto 01
-        </h3>
-
-        <p class="price">
-          R$ 79,90
-        </p>
-
+        <h3>Produto 01</h3>
+        <p class="price">R$ 79,90</p>
       </div>
 
-
       <div class="product">
-
         <div class="product-image"></div>
-
-        <h3>
-          Produto 02
-        </h3>
-
-        <p class="price">
-          R$ 89,90
-        </p>
-
+        <h3>Produto 02</h3>
+        <p class="price">R$ 89,90</p>
       </div>
 
-
       <div class="product">
-
         <div class="product-image"></div>
-
-        <h3>
-          Produto 03
-        </h3>
-
-        <p class="price">
-          R$ 99,90
-        </p>
-
+        <h3>Produto 03</h3>
+        <p class="price">R$ 99,90</p>
       </div>
 
-
       <div class="product">
-
         <div class="product-image"></div>
-
-        <h3>
-          Produto 04
-        </h3>
-
-        <p class="price">
-          R$ 69,90
-        </p>
-
+        <h3>Produto 04</h3>
+        <p class="price">R$ 69,90</p>
       </div>
-
 
     </div>
 
   </section>
 
 
-  <!-- RODAPÉ -->
-
   <footer>
 
-    <p>
-      © 2026 DREIZZA — Todos os direitos reservados.
-    </p>
+    <p>© 2026 DREIZZA — Todos os direitos reservados.</p>
 
   </footer>
 
 </body>
 
 </html>
-```
