@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -13,6 +14,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -20,22 +25,17 @@
       color: #222;
     }
 
-    /* LOGO */
-
-    .logo img {
-      width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* CABEÇALHO */
+    /* =========================
+       CABEÇALHO
+    ========================= */
 
     header {
       padding: 20px;
       text-align: center;
       border-bottom: 1px solid #eee;
       background: #fff;
+      position: relative;
+      z-index: 10;
     }
 
     .logo {
@@ -53,203 +53,359 @@
       text-decoration: none;
       color: #222;
       font-size: 14px;
+      transition: 0.3s;
     }
 
-    /* BANNER */
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+    /* =========================
+       BANNER
+    ========================= */
 
     .banner {
       position: relative;
       width: 100%;
-      min-height: 500px;
+      height: 650px;
       overflow: hidden;
       background: #000;
       color: white;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
     }
 
     .banner-video {
       position: absolute;
+
       top: 0;
       left: 0;
+
       width: 100%;
       height: 100%;
-      object-fit: contain;
+
+      object-fit: cover;
+
       background: #000;
+
       z-index: 0;
     }
 
     .banner::after {
       content: "";
+
       position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.18);
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: rgba(0, 0, 0, 0.20);
+
       z-index: 1;
     }
 
     .banner-content {
       position: relative;
+
       z-index: 2;
+
       padding: 20px;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+      text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.6);
     }
 
     .banner h1 {
-      font-size: 42px;
+      font-size: 48px;
+
       margin: 0 0 15px;
+
+      letter-spacing: 6px;
     }
 
     .banner p {
-      font-size: 18px;
-      margin: 0 0 25px;
+      font-size: 19px;
+
+      margin: 0 0 30px;
     }
 
-    .button {
+    .banner-button {
       display: inline-block;
-      background: #222;
-      color: white;
-      padding: 14px 28px;
+
+      padding: 14px 30px;
+
+      background: #fff;
+
+      color: #222;
+
       text-decoration: none;
-      border-radius: 3px;
-      font-size: 16px;
-      text-shadow: none;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      border-radius: 2px;
+
+      transition: 0.3s;
     }
 
-    .button:hover {
-      background: #444;
+    .banner-button:hover {
+      background: #222;
+      color: #fff;
     }
 
-    /* PRODUTOS */
+    /* =========================
+       PRODUTOS
+    ========================= */
 
-    .section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+    .produtos {
+      padding: 60px 20px;
 
-    .section h2 {
       text-align: center;
-      margin-bottom: 30px;
+
+      background: #fff;
     }
 
-    .products {
+    .produtos h2 {
+      font-size: 28px;
+
+      margin: 0 0 40px;
+
+      letter-spacing: 3px;
+    }
+
+    .produtos-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 20px;
+
+      max-width: 1200px;
+
+      margin: 0 auto;
     }
 
-    .product {
-      text-align: center;
+    .produto {
+      background: #fff;
+
+      text-align: left;
+
+      overflow: hidden;
     }
 
-    .product-image {
-      height: 260px;
-      background: #eee;
-      margin-bottom: 15px;
+    .produto img {
+      width: 100%;
+
+      height: 350px;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: 0.3s;
     }
 
-    .product h3 {
+    .produto:hover img {
+      transform: scale(1.02);
+    }
+
+    .produto-info {
+      padding: 15px 0;
+    }
+
+    .produto-nome {
+      font-size: 15px;
+
       margin-bottom: 8px;
     }
 
-    .price {
+    .produto-preco {
+      font-size: 16px;
+
       font-weight: bold;
     }
 
-    /* RODAPÉ */
+    /* =========================
+       RODAPÉ
+    ========================= */
 
     footer {
-      margin-top: 50px;
-      padding: 40px 20px;
+      margin-top: 20px;
+
+      padding: 35px 20px;
+
       text-align: center;
-      background: #222;
-      color: white;
+
+      border-top: 1px solid #eee;
+
+      background: #fff;
+
+      font-size: 13px;
+
+      color: #555;
     }
 
-    /* CELULAR */
+    /* =========================
+       CELULAR
+    ========================= */
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
 
-      .logo img {
-        width: 150px;
+      header {
+        padding: 18px 10px;
+      }
+
+      .logo {
+        font-size: 26px;
+      }
+
+      nav {
+        margin-top: 12px;
       }
 
       nav a {
-        margin: 0 5px;
+        margin: 0 6px;
+
         font-size: 13px;
       }
 
       .banner {
-        min-height: 520px;
-      }
-
-      .banner-video {
-        object-fit: contain;
+        height: 550px;
       }
 
       .banner h1 {
-        font-size: 32px;
+        font-size: 34px;
+
+        letter-spacing: 4px;
       }
 
       .banner p {
         font-size: 16px;
       }
 
-      .banner-content {
-        padding: 20px;
+      .produtos {
+        padding: 45px 15px;
       }
 
-      .button {
-        padding: 14px 25px;
+      .produtos h2 {
+        font-size: 24px;
+
+        margin-bottom: 30px;
       }
+
+      .produtos-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 15px;
+      }
+
+      .produto img {
+        height: 280px;
+      }
+
     }
 
-    /* COMPUTADOR */
+    /* =========================
+       CELULAR PEQUENO
+    ========================= */
 
-    @media (min-width: 768px) {
-
-      .products {
-        grid-template-columns: repeat(4, 1fr);
-      }
+    @media (max-width: 480px) {
 
       .banner {
-        min-height: 550px;
+        height: 500px;
       }
 
       .banner h1 {
-        font-size: 56px;
+        font-size: 28px;
       }
 
       .banner p {
-        font-size: 20px;
+        font-size: 15px;
       }
+
+      .banner-button {
+        padding: 12px 24px;
+
+        font-size: 13px;
+      }
+
+      .produtos-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 12px;
+      }
+
+      .produto img {
+        height: 240px;
+      }
+
+      .produto-nome {
+        font-size: 13px;
+      }
+
+      .produto-preco {
+        font-size: 14px;
+      }
+
     }
 
   </style>
 
 </head>
 
+
 <body>
+
+
+  <!-- =========================
+       CABEÇALHO
+  ========================= -->
 
   <header>
 
     <div class="logo">
-      <img src="IMG-20260801-WA0069(1).jpg" alt="DREIZZA">
+      DREIZZA
     </div>
 
     <nav>
-      <a href="#">Início</a>
-      <a href="#">Produtos</a>
-      <a href="#">Promoções</a>
-      <a href="#">Carrinho</a>
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#produtos">
+        Produtos
+      </a>
+
+      <a href="#contato">
+        Contato
+      </a>
+
     </nav>
 
   </header>
 
 
-  <section class="banner">
+  <!-- =========================
+       BANNER COM VÍDEO
+  ========================= -->
+
+  <section
+    class="banner"
+    id="inicio"
+  >
 
     <video
       class="banner-video"
@@ -257,70 +413,173 @@
       muted
       loop
       playsinline
-      preload="auto">
+      preload="auto"
+    >
 
       <source
-        src="https://dreizza007.github.io/DREIZZA/DREIZZA_banner.mp4"
-        type="video/mp4">
+        src="DREIZZA_banner.mp4"
+        type="video/mp4"
+      >
 
-      Seu navegador não suporta vídeo.
+      Seu navegador não suporta vídeo HTML5.
 
     </video>
 
 
     <div class="banner-content">
 
-      <h1>Nova coleção</h1>
+      <h1>
+        DREIZZA
+      </h1>
 
-      <p>Descubra seu novo estilo na DREIZZA</p>
+      <p>
+        Moda feminina para você.
+      </p>
 
-      <a href="#" class="button">COMPRAR AGORA</a>
-
-    </div>
-
-  </section>
-
-
-  <section class="section">
-
-    <h2>Produtos em destaque</h2>
-
-    <div class="products">
-
-      <div class="product">
-        <div class="product-image"></div>
-        <h3>Produto 01</h3>
-        <p class="price">R$ 79,90</p>
-      </div>
-
-      <div class="product">
-        <div class="product-image"></div>
-        <h3>Produto 02</h3>
-        <p class="price">R$ 89,90</p>
-      </div>
-
-      <div class="product">
-        <div class="product-image"></div>
-        <h3>Produto 03</h3>
-        <p class="price">R$ 99,90</p>
-      </div>
-
-      <div class="product">
-        <div class="product-image"></div>
-        <h3>Produto 04</h3>
-        <p class="price">R$ 69,90</p>
-      </div>
+      <a
+        href="#produtos"
+        class="banner-button"
+      >
+        VER PRODUTOS
+      </a>
 
     </div>
 
   </section>
 
 
-  <footer>
+  <!-- =========================
+       PRODUTOS
+  ========================= -->
 
-    <p>© 2026 DREIZZA — Todos os direitos reservados.</p>
+  <section
+    class="produtos"
+    id="produtos"
+  >
+
+    <h2>
+      DESTAQUES
+    </h2>
+
+
+    <div class="produtos-grid">
+
+
+      <!-- PRODUTO 1 -->
+
+      <div class="produto">
+
+        <img
+          src="produto1.jpg"
+          alt="Produto DREIZZA"
+        >
+
+        <div class="produto-info">
+
+          <div class="produto-nome">
+            Produto DREIZZA
+          </div>
+
+          <div class="produto-preco">
+            R$ 00,00
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUTO 2 -->
+
+      <div class="produto">
+
+        <img
+          src="produto2.jpg"
+          alt="Produto DREIZZA"
+        >
+
+        <div class="produto-info">
+
+          <div class="produto-nome">
+            Produto DREIZZA
+          </div>
+
+          <div class="produto-preco">
+            R$ 00,00
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUTO 3 -->
+
+      <div class="produto">
+
+        <img
+          src="produto3.jpg"
+          alt="Produto DREIZZA"
+        >
+
+        <div class="produto-info">
+
+          <div class="produto-nome">
+            Produto DREIZZA
+          </div>
+
+          <div class="produto-preco">
+            R$ 00,00
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUTO 4 -->
+
+      <div class="produto">
+
+        <img
+          src="produto4.jpg"
+          alt="Produto DREIZZA"
+        >
+
+        <div class="produto-info">
+
+          <div class="produto-nome">
+            Produto DREIZZA
+          </div>
+
+          <div class="produto-preco">
+            R$ 00,00
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================= -->
+
+  <footer
+    id="contato"
+  >
+
+    <p>
+      © 2026 DREIZZA. Todos os direitos reservados.
+    </p>
 
   </footer>
+
 
 </body>
 
