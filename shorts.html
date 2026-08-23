@@ -29,9 +29,7 @@
       max-width: 100%;
     }
 
-    /* =========================
-       CABEÇALHO
-    ========================= */
+    /* CABEÇALHO */
 
     .topo {
       background: #fff;
@@ -58,9 +56,7 @@
       font-size: 25px;
     }
 
-    /* =========================
-       FOTO PRINCIPAL
-    ========================= */
+    /* GALERIA */
 
     .galeria {
       width: 100%;
@@ -79,22 +75,20 @@
       object-position: center;
     }
 
-    /* =========================
-       BOLINHAS
-    ========================= */
+    /* BOLINHAS */
 
     .dots {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 22px;
-      padding: 25px 0 30px;
+      gap: 17px;
+      padding: 25px 10px 30px;
       background: #fff;
     }
 
     .dot {
-      width: 17px;
-      height: 17px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background: #aaa;
       border: 1px solid #333;
@@ -109,9 +103,7 @@
       background: #000;
     }
 
-    /* =========================
-       CONTEÚDO
-    ========================= */
+    /* PRODUTO */
 
     .produto {
       padding: 0 34px 60px;
@@ -123,7 +115,6 @@
       margin: 0 0 12px;
       font-size: 34px;
       line-height: 1.15;
-      font-weight: 700;
     }
 
     .referencia {
@@ -141,7 +132,7 @@
 
     .preco {
       font-size: 29px;
-      font-weight: 700;
+      font-weight: bold;
       margin: 20px 0 8px;
     }
 
@@ -152,20 +143,17 @@
     }
 
     .pix {
-      font-size: 16px;
-      font-weight: 600;
       color: #2a8c55;
+      font-size: 16px;
+      font-weight: bold;
       margin-bottom: 55px;
     }
 
-    /* =========================
-       TAMANHO
-    ========================= */
+    /* TAMANHO */
 
     .titulo-opcao {
-      margin: 0 0 6px;
       font-size: 22px;
-      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .tamanho {
@@ -181,9 +169,7 @@
       color: #f1a2b8;
     }
 
-    /* =========================
-       QUANTIDADE
-    ========================= */
+    /* QUANTIDADE */
 
     .quantidade {
       display: grid;
@@ -191,7 +177,6 @@
       align-items: center;
       text-align: center;
       margin: 15px 0 70px;
-      font-size: 25px;
     }
 
     .quantidade button {
@@ -199,17 +184,14 @@
       background: transparent;
       font-size: 34px;
       cursor: pointer;
-      color: #111;
     }
 
     .quantidade span {
-      font-size: 18px;
       color: #777;
+      font-size: 18px;
     }
 
-    /* =========================
-       OUTRAS CORES
-    ========================= */
+    /* CORES */
 
     .outras-cores {
       margin-bottom: 55px;
@@ -217,7 +199,7 @@
 
     .outras-cores h2 {
       font-size: 23px;
-      margin: 0 0 14px;
+      margin-bottom: 14px;
     }
 
     .cores {
@@ -226,12 +208,12 @@
     }
 
     .cor-thumb {
-      width: 68px;
-      height: 68px;
+      width: 70px;
+      height: 70px;
       border: 2px solid #ccc;
+      background: #fff;
       padding: 2px;
       cursor: pointer;
-      background: #fff;
     }
 
     .cor-thumb.selecionada {
@@ -244,9 +226,7 @@
       object-fit: cover;
     }
 
-    /* =========================
-       BOTÃO COMPRAR
-    ========================= */
+    /* COMPRAR */
 
     .comprar {
       width: 100%;
@@ -260,9 +240,7 @@
       margin-bottom: 35px;
     }
 
-    /* =========================
-       DETALHES
-    ========================= */
+    /* DETALHES */
 
     .detalhes {
       border-top: 1px solid #eee;
@@ -274,17 +252,12 @@
     }
 
     .detalhes p {
-      margin: 8px 0;
-      font-size: 16px;
       color: #666;
+      font-size: 16px;
+      margin: 8px 0;
     }
 
-    /* =========================
-       CELULAR
-    ========================= */
-
     @media (max-width: 600px) {
-
       .topo {
         padding: 15px;
       }
@@ -304,40 +277,21 @@
       .produto h1 {
         font-size: 32px;
       }
-
-      .referencia {
-        font-size: 18px;
-      }
-
-      .descricao {
-        font-size: 18px;
-      }
-
-      .preco {
-        font-size: 28px;
-      }
     }
-
   </style>
 </head>
 
-
 <body>
-
-  <!-- CABEÇALHO -->
 
   <header class="topo">
 
-    <a href="index.html" class="voltar">
-      ←
-    </a>
+    <a href="index.html" class="voltar">←</a>
 
     <a href="index.html">
       <img
         src="IMG-20260801-WA0069(1).jpg"
         alt="DREIZZA"
-        class="logo"
-      >
+        class="logo">
     </a>
 
     <a href="index.html#carrinho" class="carrinho">
@@ -347,72 +301,40 @@
   </header>
 
 
-  <!-- GALERIA -->
+  <!-- FOTO PRINCIPAL -->
 
   <section class="galeria">
 
     <div class="foto-principal">
 
       <img
-        src="1000219265.jpg"
         id="fotoPrincipal"
-        alt="Mini Shorts em Couro PU"
-      >
+        src="IMG-20260822-WA0041(1).jpg"
+        alt="Mini Shorts em Couro PU">
 
     </div>
 
   </section>
 
 
-  <!-- BOLINHAS DAS FOTOS -->
+  <!-- BOLINHAS DAS 7 FOTOS -->
 
   <div class="dots">
 
-    <span
-      class="dot ativo"
-      onclick="mudarFoto(0)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(1)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(2)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(3)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(4)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(5)"
-    ></span>
-
-    <span
-      class="dot"
-      onclick="mudarFoto(6)"
-    ></span>
+    <span class="dot ativo" onclick="mudarFoto(0)"></span>
+    <span class="dot" onclick="mudarFoto(1)"></span>
+    <span class="dot" onclick="mudarFoto(2)"></span>
+    <span class="dot" onclick="mudarFoto(3)"></span>
+    <span class="dot" onclick="mudarFoto(4)"></span>
+    <span class="dot" onclick="mudarFoto(5)"></span>
+    <span class="dot" onclick="mudarFoto(6)"></span>
 
   </div>
 
 
-  <!-- PRODUTO -->
-
   <main class="produto">
 
-    <h1>
-      Mini Shorts em Couro PU
-    </h1>
+    <h1>Mini Shorts em Couro PU</h1>
 
     <div class="referencia">
       REF: DREIZZA-SHORT-001
@@ -439,8 +361,6 @@
     </div>
 
 
-    <!-- PREÇO -->
-
     <div class="preco">
       R$ 130,00
     </div>
@@ -454,44 +374,26 @@
     </p>
 
 
-    <!-- TAMANHO -->
-
     <h2 class="titulo-opcao">
       Tamanho
     </h2>
 
     <div class="tamanho">
 
-      <span>
-        Único (36–42)
-      </span>
-
-      <span>
-        -
-      </span>
-
-      <span class="tamanho-preco">
-        R$ 130,00
-      </span>
+      <span>Único (36–42)</span>
+      <span>-</span>
+      <span class="tamanho-preco">R$ 130,00</span>
 
     </div>
 
 
-    <!-- QUANTIDADE -->
-
     <div class="quantidade">
 
-      <button onclick="diminuir()">
-        −
-      </button>
+      <button onclick="diminuir()">−</button>
 
-      <span id="quantidade">
-        0
-      </span>
+      <span id="quantidade">0</span>
 
-      <button onclick="aumentar()">
-        +
-      </button>
+      <button onclick="aumentar()">+</button>
 
     </div>
 
@@ -513,33 +415,12 @@
           onclick="selecionarCor(
             this,
             'Preto',
-            '1000219265.jpg'
-          )"
-        >
+            'IMG-20260822-WA0041(1).jpg'
+          )">
 
           <img
-            src="1000219265.jpg"
-            alt="Preto"
-          >
-
-        </button>
-
-
-        <!-- VINHO -->
-
-        <button
-          class="cor-thumb"
-          onclick="selecionarCor(
-            this,
-            'Vinho',
-            '1000219270.jpg'
-          )"
-        >
-
-          <img
-            src="1000219270.jpg"
-            alt="Vinho"
-          >
+            src="IMG-20260822-WA0041(1).jpg"
+            alt="Shorts Preto">
 
         </button>
 
@@ -551,14 +432,29 @@
           onclick="selecionarCor(
             this,
             'Marrom',
-            '1000219268.jpg'
-          )"
-        >
+            'IMG-20260822-WA0044.jpg'
+          )">
 
           <img
-            src="1000219268.jpg"
-            alt="Marrom"
-          >
+            src="IMG-20260822-WA0044.jpg"
+            alt="Shorts Marrom">
+
+        </button>
+
+
+        <!-- VINHO -->
+
+        <button
+          class="cor-thumb"
+          onclick="selecionarCor(
+            this,
+            'Vinho',
+            'IMG-20260822-WA0046.jpg'
+          )">
+
+          <img
+            src="IMG-20260822-WA0046.jpg"
+            alt="Shorts Vinho">
 
         </button>
 
@@ -567,27 +463,42 @@
     </div>
 
 
-    <!-- COMPRAR -->
-
     <button
       class="comprar"
-      onclick="comprarProduto()"
-    >
+      onclick="comprarProduto()">
+
       Comprar
+
     </button>
 
 
-    <!-- DETALHES -->
-
     <section class="detalhes">
 
-      <h2>
-        Detalhes do produto
-      </h2>
+      <h2>Detalhes do produto</h2>
 
       <p>
-        <strong>Cores:</strong>
-        Preto, Vinho e Marrom
+        <strong>Preço:</strong>
+        R$ 130,00
+      </p>
+
+      <p>
+        <strong>Parcelamento:</strong>
+        2x de R$ 65,00 sem juros
+      </p>
+
+      <p>
+        <strong>Pix:</strong>
+        R$ 123,50 (5% OFF)
+      </p>
+
+      <p>
+        <strong>Cores e estoque:</strong>
+        Preto 1, Vinho 1 e Marrom 1
+      </p>
+
+      <p>
+        <strong>Material:</strong>
+        Couro PU
       </p>
 
       <p>
@@ -617,19 +528,20 @@
 
   <script>
 
+    /* NOMES REAIS DAS FOTOS NO GITHUB */
+
     const fotos = [
-      "1000219265.jpg",
-      "1000219266.jpg",
-      "1000219267.jpg",
-      "1000219268.jpg",
-      "1000219269.jpg",
-      "1000219270.jpg",
-      "1000219271.jpg"
+      "IMG-20260822-WA0041(1).jpg",
+      "IMG-20260822-WA0042.jpg",
+      "IMG-20260822-WA0043.jpg",
+      "IMG-20260822-WA0044.jpg",
+      "IMG-20260822-WA0045.jpg",
+      "IMG-20260822-WA0046.jpg",
+      "IMG-20260822-WA0047.jpg"
     ];
 
 
     let quantidade = 0;
-
     let corSelecionada = "Preto";
 
 
@@ -672,19 +584,14 @@
     }
 
 
-    function selecionarCor(
-      botao,
-      cor,
-      foto
-    ) {
+    function selecionarCor(botao, cor, foto) {
 
       corSelecionada = cor;
 
       document.getElementById("fotoPrincipal").src =
         foto;
 
-      document
-        .querySelectorAll(".cor-thumb")
+      document.querySelectorAll(".cor-thumb")
         .forEach(function(item) {
 
           item.classList.remove("selecionada");
@@ -712,7 +619,7 @@
         "Mini Shorts em Couro PU\n" +
         "Cor: " + corSelecionada + "\n" +
         "Quantidade: " + quantidade + "\n" +
-        "Valor: R$ 130,00"
+        "Valor unitário: R$ 130,00"
       );
 
     }
