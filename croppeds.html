@@ -283,81 +283,51 @@
 <body>
 
   <header class="topo">
-
-    <a href="index.html" class="voltar">
-      ←
-    </a>
+    <a href="index.html" class="voltar">←</a>
 
     <a href="index.html">
-      <img
-        src="IMG-20260801-WA0069(1).jpg"
-        alt="DREIZZA"
-        class="logo"
-      >
+      <img src="IMG-20260801-WA0069(1).jpg" alt="DREIZZA" class="logo">
     </a>
 
-    <a href="index.html#carrinho" class="carrinho">
-      🛒
-    </a>
-
+    <a href="index.html#carrinho" class="carrinho">🛒</a>
   </header>
 
-
   <section class="galeria">
-
     <div class="foto-principal">
-
       <img
-        src="cropped-luna-1.jpg"
+        src="IMG-20260823-WA0017.jpg"
         id="fotoPrincipal"
-        alt="Cropped Luna"
-      >
-
+        alt="Cropped Luna">
     </div>
-
   </section>
 
-
   <div class="dots">
-
     <span class="dot ativo" onclick="mudarFoto(0)"></span>
     <span class="dot" onclick="mudarFoto(1)"></span>
     <span class="dot" onclick="mudarFoto(2)"></span>
     <span class="dot" onclick="mudarFoto(3)"></span>
     <span class="dot" onclick="mudarFoto(4)"></span>
-
   </div>
-
 
   <main class="produto">
 
-    <h1>
-      Cropped Luna
-    </h1>
+    <h1>Cropped Luna</h1>
 
     <div class="referencia">
       REF: DREIZZA-CROP-LUNA-001
     </div>
 
-
     <div class="descricao">
-
       O Cropped Luna é confeccionado em poliamida.
       Versátil e confortável, possui toque macio e
       caimento impecável.
-
       <br><br>
-
       Permite diferentes formas de amarração,
       valorizando o busto e criando o efeito
       "silicone".
-
       <br><br>
-
       Conta ainda com tecido duplo na região do busto.
-
     </div>
-
 
     <div class="preco">
       R$ 59,00
@@ -371,265 +341,124 @@
       R$ 56,05 no Pix (5% OFF)
     </p>
 
-
     <h2 class="titulo-opcao">
       Tamanho
     </h2>
 
     <div class="tamanho">
-
-      <span>
-        Único
-      </span>
-
-      <span>
-        -
-      </span>
-
-      <span class="tamanho-preco">
-        R$ 59,00
-      </span>
-
+      <span>Único</span>
+      <span>-</span>
+      <span class="tamanho-preco">R$ 59,00</span>
     </div>
-
 
     <div class="quantidade">
-
-      <button onclick="diminuir()">
-        −
-      </button>
-
-      <span id="quantidade">
-        0
-      </span>
-
-      <button onclick="aumentar()">
-        +
-      </button>
-
+      <button onclick="diminuir()">−</button>
+      <span id="quantidade">0</span>
+      <button onclick="aumentar()">+</button>
     </div>
 
-
     <div class="outras-cores">
-
-      <h2>
-        Outras Cores:
-      </h2>
+      <h2>Outras Cores:</h2>
 
       <div class="cores">
 
-
         <button
           class="cor-thumb selecionada"
-          onclick="selecionarCor(this, 'Off White', 'cropped-luna-1.jpg')"
-        >
-
-          <img
-            src="cropped-luna-1.jpg"
-            alt="Cropped Luna Off White"
-          >
-
+          onclick="selecionarCor(this, 'Off White', 'IMG-20260823-WA0017.jpg')">
+          <img src="IMG-20260823-WA0017.jpg" alt="Cropped Luna Off White">
         </button>
-
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Preto', 'cropped-luna-2.jpg')"
-        >
-
-          <img
-            src="cropped-luna-2.jpg"
-            alt="Cropped Luna Preto"
-          >
-
+          onclick="selecionarCor(this, 'Preto', 'IMG-20260823-WA0018.jpg')">
+          <img src="IMG-20260823-WA0018.jpg" alt="Cropped Luna Preto">
         </button>
-
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Vinho', 'cropped-luna-4.jpg')"
-        >
-
-          <img
-            src="cropped-luna-4.jpg"
-            alt="Cropped Luna Vinho"
-          >
-
+          onclick="selecionarCor(this, 'Vinho', 'IMG-20260823-WA0020.jpg')">
+          <img src="IMG-20260823-WA0020.jpg" alt="Cropped Luna Vinho">
         </button>
-
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Cinza', 'cropped-luna-5.jpg')"
-        >
-
-          <img
-            src="cropped-luna-5.jpg"
-            alt="Cropped Luna Cinza"
-          >
-
+          onclick="selecionarCor(this, 'Cinza', 'IMG-20260823-WA0021.jpg')">
+          <img src="IMG-20260823-WA0021.jpg" alt="Cropped Luna Cinza">
         </button>
-
 
       </div>
-
     </div>
 
-
-    <button
-      class="comprar"
-      onclick="comprarProduto()"
-    >
+    <button class="comprar" onclick="comprarProduto()">
       Comprar
     </button>
 
-
     <section class="detalhes">
+      <h2>Detalhes do produto</h2>
 
-      <h2>
-        Detalhes do produto
-      </h2>
-
-      <p>
-        <strong>Preço:</strong>
-        R$ 59,00
-      </p>
-
-      <p>
-        <strong>Parcelamento:</strong>
-        2x de R$ 29,50 sem juros
-      </p>
-
-      <p>
-        <strong>Pix:</strong>
-        R$ 56,05 (5% OFF)
-      </p>
-
-      <p>
-        <strong>Cores e estoques:</strong>
-        Off White 3, Vinho 1, Preto 1 e Cinza 2
-      </p>
-
-      <p>
-        <strong>Peso:</strong>
-        100 g
-      </p>
-
-      <p>
-        <strong>Largura:</strong>
-        12 cm
-      </p>
-
-      <p>
-        <strong>Comprimento:</strong>
-        26 cm
-      </p>
-
-      <p>
-        <strong>Altura:</strong>
-        4 cm
-      </p>
-
-      <p>
-        <strong>Material:</strong>
-        Poliamida
-      </p>
-
+      <p><strong>Preço:</strong> R$ 59,00</p>
+      <p><strong>Parcelamento:</strong> 2x de R$ 29,50 sem juros</p>
+      <p><strong>Pix:</strong> R$ 56,05 (5% OFF)</p>
+      <p><strong>Cores e estoques:</strong> Off white 3, vinho 1, preto 1, cinza 2</p>
+      <p><strong>Peso:</strong> 100 g</p>
+      <p><strong>Largura:</strong> 12 cm</p>
+      <p><strong>Comprimento:</strong> 26 cm</p>
+      <p><strong>Altura:</strong> 4 cm</p>
+      <p><strong>Material:</strong> Poliamida</p>
     </section>
 
   </main>
 
-
   <script>
-
     const fotos = [
-      "cropped-luna-1.jpg",
-      "cropped-luna-2.jpg",
-      "cropped-luna-3.jpg",
-      "cropped-luna-4.jpg",
-      "cropped-luna-5.jpg"
+      "IMG-20260823-WA0017.jpg",
+      "IMG-20260823-WA0018.jpg",
+      "IMG-20260823-WA0019.jpg",
+      "IMG-20260823-WA0020.jpg",
+      "IMG-20260823-WA0021.jpg"
     ];
 
     let quantidade = 0;
     let corSelecionada = "Off White";
 
-
     function mudarFoto(numero) {
+      document.getElementById("fotoPrincipal").src = fotos[numero];
 
-      document.getElementById("fotoPrincipal").src =
-        fotos[numero];
-
-      const dots =
-        document.querySelectorAll(".dot");
-
+      const dots = document.querySelectorAll(".dot");
       dots.forEach(function(dot) {
         dot.classList.remove("ativo");
       });
 
       dots[numero].classList.add("ativo");
-
     }
-
 
     function aumentar() {
-
       quantidade++;
-
-      document
-        .getElementById("quantidade")
-        .innerText = quantidade;
-
+      document.getElementById("quantidade").innerText = quantidade;
     }
 
-
     function diminuir() {
-
       if (quantidade > 0) {
         quantidade--;
       }
-
-      document
-        .getElementById("quantidade")
-        .innerText = quantidade;
-
+      document.getElementById("quantidade").innerText = quantidade;
     }
 
-
-    function selecionarCor(
-      botao,
-      cor,
-      foto
-    ) {
-
+    function selecionarCor(botao, cor, foto) {
       corSelecionada = cor;
+      document.getElementById("fotoPrincipal").src = foto;
 
-      document
-        .getElementById("fotoPrincipal")
-        .src = foto;
-
-      document
-        .querySelectorAll(".cor-thumb")
-        .forEach(function(item) {
-
-          item.classList.remove("selecionada");
-
-        });
+      document.querySelectorAll(".cor-thumb").forEach(function(item) {
+        item.classList.remove("selecionada");
+      });
 
       botao.classList.add("selecionada");
-
     }
 
-
     function comprarProduto() {
-
       if (quantidade === 0) {
-
         quantidade = 1;
-
-        document
-          .getElementById("quantidade")
-          .innerText = 1;
-
+        document.getElementById("quantidade").innerText = 1;
       }
 
       alert(
@@ -639,9 +468,7 @@
         "Quantidade: " + quantidade + "\n" +
         "Valor unitário: R$ 59,00"
       );
-
     }
-
   </script>
 
 </body>
