@@ -24,42 +24,109 @@
     }
 
     /* =========================
+       FAIXA SUPERIOR
+    ========================= */
+
+    .top-bar {
+      width: 100%;
+      background: #e5a7ff;
+      color: #111;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px 8px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* =========================
        CABEÇALHO
     ========================= */
 
-    header {
-      padding: 20px 15px;
-      text-align: center;
+    .header {
+      width: 100%;
+      height: 120px;
+      padding: 10px 18px;
       background: #fff;
-      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .menu-btn {
+      border: 0;
+      background: transparent;
+      font-size: 34px;
+      cursor: pointer;
+      width: 50px;
+      color: #111;
     }
 
     .logo {
       width: 220px;
-      max-width: 80%;
+      max-width: 55%;
       height: auto;
+      max-height: 90px;
+      object-fit: contain;
       display: block;
-      margin: 0 auto;
     }
 
-    nav {
-      margin-top: 20px;
+    .header-icons {
+      min-width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      font-size: 28px;
+    }
+
+    .header-icons a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .cart {
+      position: relative;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #9bd9af;
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    .nav {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 18px;
+      padding: 10px 10px 15px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
     }
 
-    nav a {
-      display: inline-block;
-      padding: 6px 8px;
+    .nav a {
       color: #222;
       text-decoration: none;
       font-size: 15px;
     }
 
-    nav a:hover {
+    .nav a:hover {
       text-decoration: underline;
     }
 
@@ -70,7 +137,7 @@
     .banner {
       position: relative;
       width: 100%;
-      height: 600px;
+      height: 720px;
       background: #000;
       overflow: hidden;
       display: flex;
@@ -82,8 +149,7 @@
 
     .banner-video {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -92,29 +158,26 @@
 
     .banner-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.30);
+      inset: 0;
+      background: rgba(0, 0, 0, 0.18);
       z-index: 1;
     }
 
     .banner-content {
       position: relative;
       z-index: 2;
-      padding: 20px;
       width: 100%;
+      padding: 20px;
     }
 
     .banner h1 {
       margin: 0 0 15px;
-      font-size: 48px;
+      font-size: 54px;
       color: #fff;
     }
 
     .banner p {
-      margin: 0 0 25px;
+      margin: 0 0 28px;
       font-size: 22px;
       color: #fff;
     }
@@ -126,13 +189,8 @@
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      padding: 16px 35px;
+      padding: 18px 40px;
       border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .banner-button:hover {
-      background: #eee;
     }
 
     /* =========================
@@ -146,9 +204,8 @@
     }
 
     .produtos h2 {
-      margin-top: 0;
-      margin-bottom: 35px;
-      font-size: 32px;
+      margin: 0 0 35px;
+      font-size: 38px;
     }
 
     .produtos-grid {
@@ -161,28 +218,28 @@
     }
 
     .produto {
-      background: #f7f7f7;
-      padding: 35px 20px;
+      background: #f6f6f6;
+      padding: 40px 20px;
       border-radius: 8px;
     }
 
     .produto h3 {
       margin-top: 0;
-      font-size: 20px;
+      font-size: 21px;
     }
 
     .produto p {
-      font-size: 15px;
       color: #555;
+      line-height: 1.5;
     }
 
     .produto a {
       display: inline-block;
       margin-top: 10px;
-      padding: 12px 20px;
       background: #000;
       color: #fff;
       text-decoration: none;
+      padding: 13px 22px;
       border-radius: 5px;
     }
 
@@ -192,13 +249,13 @@
 
     .promocoes {
       padding: 70px 20px;
-      background: #f4f4f4;
       text-align: center;
+      background: #f3f3f3;
     }
 
     .promocoes h2 {
       margin-top: 0;
-      font-size: 32px;
+      font-size: 36px;
     }
 
     .promocoes p {
@@ -209,12 +266,22 @@
     .promocoes a {
       display: inline-block;
       margin-top: 15px;
-      padding: 14px 30px;
       background: #000;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 5px;
+    }
+
+    /* =========================
+       CARRINHO
+    ========================= */
+
+    .carrinho-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
     }
 
     /* =========================
@@ -239,40 +306,56 @@
 
     @media (max-width: 768px) {
 
-      header {
-        padding: 18px 10px;
+      .top-bar {
+        font-size: 13px;
+        padding: 9px 5px;
+      }
+
+      .header {
+        height: 115px;
+        padding: 8px 12px;
+      }
+
+      .menu-btn {
+        width: 42px;
+        font-size: 30px;
       }
 
       .logo {
-        width: 180px;
-        max-width: 75%;
+        width: 210px;
+        max-width: 62%;
       }
 
-      nav {
-        margin-top: 15px;
-        gap: 2px;
+      .header-icons {
+        min-width: 65px;
+        gap: 9px;
+        font-size: 25px;
       }
 
-      nav a {
+      .nav {
+        gap: 14px;
+        padding: 9px 8px 14px;
+      }
+
+      .nav a {
         font-size: 14px;
-        padding: 5px 7px;
       }
 
       .banner {
-        height: 520px;
+        height: 700px;
       }
 
       .banner h1 {
-        font-size: 38px;
+        font-size: 46px;
       }
 
       .banner p {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       .banner-button {
-        font-size: 16px;
-        padding: 15px 28px;
+        font-size: 17px;
+        padding: 17px 34px;
       }
 
       .produtos-grid {
@@ -280,11 +363,42 @@
       }
 
       .produtos {
-        padding: 45px 15px;
+        padding: 50px 15px;
       }
 
-      .promocoes {
-        padding: 50px 15px;
+      .produtos h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .header {
+        height: 105px;
+      }
+
+      .logo {
+        width: 190px;
+      }
+
+      .nav {
+        gap: 10px;
+      }
+
+      .nav a {
+        font-size: 13px;
+      }
+
+      .banner {
+        height: 650px;
+      }
+
+      .banner h1 {
+        font-size: 40px;
+      }
+
+      .banner p {
+        font-size: 18px;
       }
     }
 
@@ -293,9 +407,20 @@
 
 <body>
 
+  <!-- FAIXA SUPERIOR -->
+
+  <div class="top-bar">
+    FRETE GRÁTIS ACIMA DE R$499 PARA TODO O BRASIL
+  </div>
+
+
   <!-- CABEÇALHO -->
 
-  <header>
+  <header class="header">
+
+    <button class="menu-btn" type="button">
+      ☰
+    </button>
 
     <img
       src="IMG-20260801-WA0069(1).jpg"
@@ -303,16 +428,37 @@
       class="logo"
     >
 
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#promocoes">Promoções</a>
-      <a href="login.html">Login</a>
-      <a href="cadastro.html">Cadastro</a>
-      <a href="#carrinho">Carrinho</a>
-    </nav>
+    <div class="header-icons">
+
+      <a href="#produtos" aria-label="Pesquisar">
+        ⌕
+      </a>
+
+      <a href="#carrinho" class="cart" aria-label="Carrinho">
+        🛒
+        <span class="cart-count">0</span>
+      </a>
+
+    </div>
 
   </header>
+
+
+  <!-- MENU -->
+
+  <nav class="nav">
+
+    <a href="#inicio">Início</a>
+
+    <a href="#produtos">Produtos</a>
+
+    <a href="#promocoes">Promoções</a>
+
+    <a href="login.html">Login</a>
+
+    <a href="cadastro.html">Cadastro</a>
+
+  </nav>
 
 
   <!-- BANNER COM VÍDEO -->
@@ -327,20 +473,31 @@
       playsinline
       preload="auto"
     >
-      <source src="video-dreizza.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos.
+
+      <source
+        src="video-dreizza.mp4"
+        type="video/mp4"
+      >
+
     </video>
 
     <div class="banner-overlay"></div>
 
     <div class="banner-content">
+
       <h1>Nova coleção</h1>
 
-      <p>Descubra seu novo estilo na DREIZZA</p>
+      <p>
+        Descubra seu novo estilo na DREIZZA
+      </p>
 
-      <a href="#produtos" class="banner-button">
+      <a
+        href="#produtos"
+        class="banner-button"
+      >
         COMPRAR AGORA
       </a>
+
     </div>
 
   </section>
@@ -348,28 +505,57 @@
 
   <!-- PRODUTOS -->
 
-  <section class="produtos" id="produtos">
+  <section
+    class="produtos"
+    id="produtos"
+  >
 
     <h2>Produtos</h2>
 
     <div class="produtos-grid">
 
       <div class="produto">
+
         <h3>Novidades</h3>
-        <p>Conheça os lançamentos da DREIZZA.</p>
-        <a href="#">Ver produtos</a>
+
+        <p>
+          Confira os novos lançamentos da DREIZZA.
+        </p>
+
+        <a href="#">
+          VER PRODUTOS
+        </a>
+
       </div>
 
+
       <div class="produto">
+
         <h3>Mais vendidos</h3>
-        <p>Os looks favoritos das nossas clientes.</p>
-        <a href="#">Ver produtos</a>
+
+        <p>
+          Conheça as peças favoritas das nossas clientes.
+        </p>
+
+        <a href="#">
+          VER PRODUTOS
+        </a>
+
       </div>
 
+
       <div class="produto">
+
         <h3>Nova coleção</h3>
-        <p>Descubra as novas peças disponíveis.</p>
-        <a href="#">Ver coleção</a>
+
+        <p>
+          Descubra as novas peças disponíveis.
+        </p>
+
+        <a href="#">
+          VER COLEÇÃO
+        </a>
+
       </div>
 
     </div>
@@ -379,12 +565,15 @@
 
   <!-- PROMOÇÕES -->
 
-  <section class="promocoes" id="promocoes">
+  <section
+    class="promocoes"
+    id="promocoes"
+  >
 
     <h2>Promoções</h2>
 
     <p>
-      Aproveite nossas ofertas e encontre seu próximo look.
+      Aproveite nossas ofertas especiais.
     </p>
 
     <a href="#produtos">
@@ -397,8 +586,8 @@
   <!-- CARRINHO -->
 
   <section
+    class="carrinho-section"
     id="carrinho"
-    style="padding: 60px 20px; text-align: center;"
   >
 
     <h2>Carrinho</h2>
@@ -414,9 +603,13 @@
 
   <footer>
 
-    <p>© 2026 DREIZZA</p>
+    <p>
+      © 2026 DREIZZA
+    </p>
 
-    <p>Todos os direitos reservados.</p>
+    <p>
+      Todos os direitos reservados.
+    </p>
 
   </footer>
 
