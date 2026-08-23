@@ -1,1 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mini Shorts em Couro PU | DREIZZA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
+    .topo {
+      background: #fff;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+
+    .voltar {
+      font-size: 28px;
+      width: 45px;
+    }
+
+    .logo {
+      width: 170px;
+      max-width: 55%;
+    }
+
+    .carrinho {
+      width: 45px;
+      text-align: right;
+      font-size: 25px;
+    }
+
+    /* =========================
+       FOTO PRINCIPAL
+    ========================= */
+
+    .galeria {
+      width: 100%;
+      background: #f5f5f5;
+    }
+
+    .foto-principal {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .foto-principal img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* =========================
+       BOLINHAS
+    ========================= */
+
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 25px 0 30px;
+      background: #fff;
+    }
+
+    .dot {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #aaa;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+
+    .dot.ativo {
+      width: 36px;
+      height: 17px;
+      border-radius: 20px;
+      border: none;
+      background: #000;
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .produto {
+      padding: 0 34px 60px;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .produto h1 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .referencia {
+      font-size: 19px;
+      color: #777;
+      margin-bottom: 48px;
+    }
+
+    .descricao {
+      font-size: 19px;
+      line-height: 1.55;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .preco {
+      font-size: 29px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .parcelamento {
+      color: #777;
+      font-size: 17px;
+      margin: 0 0 6px;
+    }
+
+    .pix {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2a8c55;
+      margin-bottom: 55px;
+    }
+
+    /* =========================
+       TAMANHO
+    ========================= */
+
+    .titulo-opcao {
+      margin: 0 0 6px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .tamanho {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .tamanho-preco {
+      color: #f1a2b8;
+    }
+
+    /* =========================
+       QUANTIDADE
+    ========================= */
+
+    .quantidade {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      text-align: center;
+      margin: 15px 0 70px;
+      font-size: 25px;
+    }
+
+    .quantidade button {
+      border: none;
+      background: transparent;
+      font-size: 34px;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .quantidade span {
+      font-size: 18px;
+      color: #777;
+    }
+
+    /* =========================
+       OUTRAS CORES
+    ========================= */
+
+    .outras-cores {
+      margin-bottom: 55px;
+    }
+
+    .outras-cores h2 {
+      font-size: 23px;
+      margin: 0 0 14px;
+    }
+
+    .cores {
+      display: flex;
+      gap: 10px;
+    }
+
+    .cor-thumb {
+      width: 68px;
+      height: 68px;
+      border: 2px solid #ccc;
+      padding: 2px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .cor-thumb.selecionada {
+      border-color: #f09db4;
+    }
+
+    .cor-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =========================
+       BOTÃO COMPRAR
+    ========================= */
+
+    .comprar {
+      width: 100%;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 22px 15px;
+      cursor: pointer;
+      margin-bottom: 35px;
+    }
+
+    /* =========================
+       DETALHES
+    ========================= */
+
+    .detalhes {
+      border-top: 1px solid #eee;
+      padding-top: 30px;
+    }
+
+    .detalhes h2 {
+      font-size: 23px;
+    }
+
+    .detalhes p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .topo {
+        padding: 15px;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .foto-principal img {
+        height: 500px;
+      }
+
+      .produto {
+        padding: 0 34px 45px;
+      }
+
+      .produto h1 {
+        font-size: 32px;
+      }
+
+      .referencia {
+        font-size: 18px;
+      }
+
+      .descricao {
+        font-size: 18px;
+      }
+
+      .preco {
+        font-size: 28px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+
+    <a href="index.html" class="voltar">
+      ←
+    </a>
+
+    <a href="index.html">
+      <img
+        src="IMG-20260801-WA0069(1).jpg"
+        alt="DREIZZA"
+        class="logo"
+      >
+    </a>
+
+    <a href="index.html#carrinho" class="carrinho">
+      🛒
+    </a>
+
+  </header>
+
+
+  <!-- GALERIA -->
+
+  <section class="galeria">
+
+    <div class="foto-principal">
+
+      <img
+        src="1000219265.jpg"
+        id="fotoPrincipal"
+        alt="Mini Shorts em Couro PU"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- BOLINHAS DAS FOTOS -->
+
+  <div class="dots">
+
+    <span
+      class="dot ativo"
+      onclick="mudarFoto(0)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(1)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(2)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(3)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(4)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(5)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(6)"
+    ></span>
+
+  </div>
+
+
+  <!-- PRODUTO -->
+
+  <main class="produto">
+
+    <h1>
+      Mini Shorts em Couro PU
+    </h1>
+
+    <div class="referencia">
+      REF: DREIZZA-SHORT-001
+    </div>
+
+
+    <div class="descricao">
+
+      Mini shorts em couro PU, estiloso e versátil,
+      com caimento que valoriza o corpo.
+
+      <br><br>
+
+      Confeccionado em material resistente e durável,
+      possui fechamento frontal em zíper com botão
+      interno invisível, garantindo um acabamento
+      impecável no corpo.
+
+      <br><br>
+
+      Perfeito para looks do dia a dia ou produções
+      mais elaboradas.
+
+    </div>
+
+
+    <!-- PREÇO -->
+
+    <div class="preco">
+      R$ 130,00
+    </div>
+
+    <p class="parcelamento">
+      2x de R$ 65,00 sem juros
+    </p>
+
+    <p class="pix">
+      R$ 123,50 no Pix (5% OFF)
+    </p>
+
+
+    <!-- TAMANHO -->
+
+    <h2 class="titulo-opcao">
+      Tamanho
+    </h2>
+
+    <div class="tamanho">
+
+      <span>
+        Único (36–42)
+      </span>
+
+      <span>
+        -
+      </span>
+
+      <span class="tamanho-preco">
+        R$ 130,00
+      </span>
+
+    </div>
+
+
+    <!-- QUANTIDADE -->
+
+    <div class="quantidade">
+
+      <button onclick="diminuir()">
+        −
+      </button>
+
+      <span id="quantidade">
+        0
+      </span>
+
+      <button onclick="aumentar()">
+        +
+      </button>
+
+    </div>
+
+
+    <!-- OUTRAS CORES -->
+
+    <div class="outras-cores">
+
+      <h2>
+        Outras Cores:
+      </h2>
+
+      <div class="cores">
+
+        <!-- PRETO -->
+
+        <button
+          class="cor-thumb selecionada"
+          onclick="selecionarCor(
+            this,
+            'Preto',
+            '1000219265.jpg'
+          )"
+        >
+
+          <img
+            src="1000219265.jpg"
+            alt="Preto"
+          >
+
+        </button>
+
+
+        <!-- VINHO -->
+
+        <button
+          class="cor-thumb"
+          onclick="selecionarCor(
+            this,
+            'Vinho',
+            '1000219270.jpg'
+          )"
+        >
+
+          <img
+            src="1000219270.jpg"
+            alt="Vinho"
+          >
+
+        </button>
+
+
+        <!-- MARROM -->
+
+        <button
+          class="cor-thumb"
+          onclick="selecionarCor(
+            this,
+            'Marrom',
+            '1000219268.jpg'
+          )"
+        >
+
+          <img
+            src="1000219268.jpg"
+            alt="Marrom"
+          >
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- COMPRAR -->
+
+    <button
+      class="comprar"
+      onclick="comprarProduto()"
+    >
+      Comprar
+    </button>
+
+
+    <!-- DETALHES -->
+
+    <section class="detalhes">
+
+      <h2>
+        Detalhes do produto
+      </h2>
+
+      <p>
+        <strong>Cores:</strong>
+        Preto, Vinho e Marrom
+      </p>
+
+      <p>
+        <strong>Peso:</strong>
+        120 g
+      </p>
+
+      <p>
+        <strong>Largura:</strong>
+        15 cm
+      </p>
+
+      <p>
+        <strong>Comprimento:</strong>
+        20 cm
+      </p>
+
+      <p>
+        <strong>Altura:</strong>
+        5 cm
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const fotos = [
+      "1000219265.jpg",
+      "1000219266.jpg",
+      "1000219267.jpg",
+      "1000219268.jpg",
+      "1000219269.jpg",
+      "1000219270.jpg",
+      "1000219271.jpg"
+    ];
+
+
+    let quantidade = 0;
+
+    let corSelecionada = "Preto";
+
+
+    function mudarFoto(numero) {
+
+      document.getElementById("fotoPrincipal").src =
+        fotos[numero];
+
+      const dots =
+        document.querySelectorAll(".dot");
+
+      dots.forEach(function(dot) {
+        dot.classList.remove("ativo");
+      });
+
+      dots[numero].classList.add("ativo");
+
+    }
+
+
+    function aumentar() {
+
+      quantidade++;
+
+      document.getElementById("quantidade")
+        .innerText = quantidade;
+
+    }
+
+
+    function diminuir() {
+
+      if (quantidade > 0) {
+        quantidade--;
+      }
+
+      document.getElementById("quantidade")
+        .innerText = quantidade;
+
+    }
+
+
+    function selecionarCor(
+      botao,
+      cor,
+      foto
+    ) {
+
+      corSelecionada = cor;
+
+      document.getElementById("fotoPrincipal").src =
+        foto;
+
+      document
+        .querySelectorAll(".cor-thumb")
+        .forEach(function(item) {
+
+          item.classList.remove("selecionada");
+
+        });
+
+      botao.classList.add("selecionada");
+
+    }
+
+
+    function comprarProduto() {
+
+      if (quantidade === 0) {
+
+        quantidade = 1;
+
+        document.getElementById("quantidade")
+          .innerText = 1;
+
+      }
+
+      alert(
+        "Produto adicionado!\n\n" +
+        "Mini Shorts em Couro PU\n" +
+        "Cor: " + corSelecionada + "\n" +
+        "Quantidade: " + quantidade + "\n" +
+        "Valor: R$ 130,00"
+      );
+
+    }
+
+  </script>
+
+</body>
+
+</html>
