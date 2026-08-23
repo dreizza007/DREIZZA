@@ -29,6 +29,8 @@
       max-width: 100%;
     }
 
+    /* CABEÇALHO */
+
     .topo {
       background: #fff;
       padding: 18px 20px;
@@ -54,6 +56,8 @@
       font-size: 25px;
     }
 
+    /* GALERIA */
+
     .galeria {
       width: 100%;
       background: #f5f5f5;
@@ -70,6 +74,8 @@
       object-fit: cover;
       object-position: center;
     }
+
+    /* BOLINHAS */
 
     .dots {
       display: flex;
@@ -97,6 +103,8 @@
       background: #000;
     }
 
+    /* PRODUTO */
+
     .produto {
       padding: 0 34px 60px;
       max-width: 760px;
@@ -123,6 +131,8 @@
       margin-bottom: 25px;
     }
 
+    /* PREÇO */
+
     .preco {
       font-size: 29px;
       font-weight: 700;
@@ -141,6 +151,8 @@
       color: #2a8c55;
       margin-bottom: 55px;
     }
+
+    /* TAMANHO */
 
     .titulo-opcao {
       margin: 0 0 6px;
@@ -161,6 +173,8 @@
     .tamanho-preco {
       color: #f1a2b8;
     }
+
+    /* QUANTIDADE */
 
     .quantidade {
       display: grid;
@@ -183,6 +197,8 @@
       color: #777;
     }
 
+    /* COR */
+
     .outras-cores {
       margin-bottom: 55px;
     }
@@ -201,7 +217,6 @@
     .cores {
       display: flex;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
     .cor-thumb {
@@ -218,6 +233,8 @@
       object-fit: cover;
     }
 
+    /* BOTÃO COMPRAR */
+
     .comprar {
       width: 100%;
       border: none;
@@ -229,6 +246,8 @@
       cursor: pointer;
       margin-bottom: 35px;
     }
+
+    /* DETALHES */
 
     .detalhes {
       border-top: 1px solid #eee;
@@ -245,7 +264,10 @@
       color: #666;
     }
 
+    /* CELULAR */
+
     @media (max-width: 600px) {
+
       .topo {
         padding: 15px;
       }
@@ -278,10 +300,13 @@
         font-size: 28px;
       }
     }
+
   </style>
 </head>
 
 <body>
+
+  <!-- CABEÇALHO -->
 
   <header class="topo">
 
@@ -304,12 +329,14 @@
   </header>
 
 
+  <!-- GALERIA -->
+
   <section class="galeria">
 
     <div class="foto-principal">
 
       <img
-        src="1000219404.jpg"
+        src="IMG-20260823-WA0061.jpg"
         id="fotoPrincipal"
         alt="Blusa Bel"
       >
@@ -318,6 +345,8 @@
 
   </section>
 
+
+  <!-- BOLINHAS -->
 
   <div class="dots">
 
@@ -334,6 +363,8 @@
   </div>
 
 
+  <!-- PRODUTO -->
+
   <main class="produto">
 
     <h1>
@@ -344,6 +375,8 @@
       REF: DREIZZA-BLUSA-BEL-001
     </div>
 
+
+    <!-- DESCRIÇÃO -->
 
     <div class="descricao">
 
@@ -360,6 +393,8 @@
     </div>
 
 
+    <!-- PREÇO -->
+
     <div class="preco">
       R$ 70,00
     </div>
@@ -372,6 +407,8 @@
       R$ 66,50 no Pix (5% OFF)
     </p>
 
+
+    <!-- TAMANHO -->
 
     <h2 class="titulo-opcao">
       Tamanho
@@ -394,6 +431,8 @@
     </div>
 
 
+    <!-- QUANTIDADE -->
+
     <div class="quantidade">
 
       <button onclick="diminuir()">
@@ -411,6 +450,8 @@
     </div>
 
 
+    <!-- COR -->
+
     <div class="outras-cores">
 
       <h2>
@@ -426,7 +467,7 @@
         <div class="cor-thumb">
 
           <img
-            src="1000219404.jpg"
+            src="IMG-20260823-WA0061.jpg"
             alt="Blusa Bel Preta"
           >
 
@@ -437,6 +478,8 @@
     </div>
 
 
+    <!-- COMPRAR -->
+
     <button
       class="comprar"
       onclick="comprarProduto()"
@@ -444,6 +487,8 @@
       Comprar
     </button>
 
+
+    <!-- DETALHES -->
 
     <section class="detalhes">
 
@@ -509,8 +554,8 @@
   <script>
 
     const fotos = [
-      "1000219404.jpg",
-      "1000219405.jpg"
+      "IMG-20260823-WA0061.jpg",
+      "IMG-20260823-WA0064.jpg"
     ];
 
     let quantidade = 0;
@@ -526,9 +571,7 @@
         document.querySelectorAll(".dot");
 
       dots.forEach(function(dot) {
-
         dot.classList.remove("ativo");
-
       });
 
       dots[numero].classList.add("ativo");
@@ -550,9 +593,7 @@
     function diminuir() {
 
       if (quantidade > 0) {
-
         quantidade--;
-
       }
 
       document
