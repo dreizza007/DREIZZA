@@ -29,8 +29,6 @@
       max-width: 100%;
     }
 
-    /* CABEÇALHO */
-
     .topo {
       background: #fff;
       padding: 18px 20px;
@@ -56,8 +54,6 @@
       font-size: 25px;
     }
 
-    /* GALERIA */
-
     .galeria {
       width: 100%;
       background: #f5f5f5;
@@ -75,15 +71,12 @@
       object-position: center;
     }
 
-    /* BOLINHAS */
-
     .dots {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 22px;
       padding: 25px 0 30px;
-      background: #fff;
     }
 
     .dot {
@@ -103,8 +96,6 @@
       background: #000;
     }
 
-    /* PRODUTO */
-
     .produto {
       padding: 0 34px 60px;
       max-width: 760px;
@@ -114,8 +105,6 @@
     .produto h1 {
       margin: 0 0 12px;
       font-size: 34px;
-      line-height: 1.15;
-      font-weight: 700;
     }
 
     .referencia {
@@ -131,11 +120,9 @@
       margin-bottom: 25px;
     }
 
-    /* PREÇOS */
-
     .preco {
       font-size: 29px;
-      font-weight: 700;
+      font-weight: bold;
       margin: 20px 0 8px;
     }
 
@@ -147,34 +134,28 @@
 
     .pix {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: bold;
       color: #2a8c55;
       margin-bottom: 55px;
     }
 
-    /* TAMANHO */
-
     .titulo-opcao {
-      margin: 0 0 6px;
       font-size: 22px;
-      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .tamanho {
       display: flex;
-      align-items: center;
       gap: 10px;
+      align-items: center;
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 25px;
-      flex-wrap: wrap;
     }
 
     .tamanho-preco {
       color: #f1a2b8;
     }
-
-    /* QUANTIDADE */
 
     .quantidade {
       display: grid;
@@ -189,7 +170,6 @@
       background: transparent;
       font-size: 34px;
       cursor: pointer;
-      color: #111;
     }
 
     .quantidade span {
@@ -197,35 +177,25 @@
       color: #777;
     }
 
-    /* COR */
-
-    .outras-cores {
+    .cor-area {
       margin-bottom: 55px;
     }
 
-    .outras-cores h2 {
+    .cor-area h2 {
       font-size: 23px;
-      margin: 0 0 14px;
+      margin-bottom: 10px;
     }
 
-    .cor-selecionada {
+    .cor-nome {
       color: #777;
-      font-size: 15px;
       margin-bottom: 15px;
-    }
-
-    .cores {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
     }
 
     .cor-thumb {
       width: 70px;
       height: 70px;
-      border: 2px solid #f09db4;
+      border: 2px solid #b40020;
       padding: 2px;
-      background: #fff;
     }
 
     .cor-thumb img {
@@ -234,8 +204,6 @@
       object-fit: cover;
     }
 
-    /* COMPRAR */
-
     .comprar {
       width: 100%;
       border: none;
@@ -243,12 +211,10 @@
       color: #fff;
       font-size: 22px;
       font-weight: bold;
-      padding: 22px 15px;
+      padding: 22px;
       cursor: pointer;
       margin-bottom: 35px;
     }
-
-    /* DETALHES */
 
     .detalhes {
       border-top: 1px solid #eee;
@@ -260,15 +226,12 @@
     }
 
     .detalhes p {
-      margin: 8px 0;
-      font-size: 16px;
       color: #666;
+      font-size: 16px;
+      margin: 8px 0;
     }
 
-    /* CELULAR */
-
     @media (max-width: 600px) {
-
       .topo {
         padding: 15px;
       }
@@ -288,39 +251,21 @@
       .produto h1 {
         font-size: 32px;
       }
-
-      .referencia {
-        font-size: 18px;
-      }
-
-      .descricao {
-        font-size: 18px;
-      }
-
-      .preco {
-        font-size: 28px;
-      }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
-
   <header class="topo">
 
-    <a href="index.html" class="voltar">
-      ←
-    </a>
+    <a href="index.html" class="voltar">←</a>
 
     <a href="index.html">
       <img
         src="IMG-20260801-WA0069(1).jpg"
         alt="DREIZZA"
-        class="logo"
-      >
+        class="logo">
     </a>
 
     <a href="index.html#carrinho" class="carrinho">
@@ -330,46 +275,30 @@
   </header>
 
 
-  <!-- GALERIA -->
-
   <section class="galeria">
 
     <div class="foto-principal">
 
       <img
-        src="1000219401.jpg"
+        src="IMG-20260823-WA0061.jpg"
         id="fotoPrincipal"
-        alt="Vestido Ayla"
-      >
+        alt="Vestido Ayla">
 
     </div>
 
   </section>
 
 
-  <!-- BOLINHAS -->
-
   <div class="dots">
 
-    <span
-      class="dot ativo"
-      onclick="mudarFoto(0)"
-    ></span>
+    <span class="dot ativo" onclick="mudarFoto(0)"></span>
 
-    <span
-      class="dot"
-      onclick="mudarFoto(1)"
-    ></span>
+    <span class="dot" onclick="mudarFoto(1)"></span>
 
-    <span
-      class="dot"
-      onclick="mudarFoto(2)"
-    ></span>
+    <span class="dot" onclick="mudarFoto(2)"></span>
 
   </div>
 
-
-  <!-- PRODUTO -->
 
   <main class="produto">
 
@@ -381,8 +310,6 @@
       REF: DREIZZA-VEST-AYLA-001
     </div>
 
-
-    <!-- DESCRIÇÃO -->
 
     <div class="descricao">
 
@@ -404,8 +331,6 @@
     </div>
 
 
-    <!-- PREÇO -->
-
     <div class="preco">
       R$ 120,00
     </div>
@@ -415,11 +340,9 @@
     </p>
 
     <p class="pix">
-      R$ 114,00 no Pix
+      R$ 114,00 no Pix (5% OFF)
     </p>
 
-
-    <!-- TAMANHO -->
 
     <h2 class="titulo-opcao">
       Tamanho
@@ -427,13 +350,9 @@
 
     <div class="tamanho">
 
-      <span>
-        Único
-      </span>
+      <span>Único</span>
 
-      <span>
-        -
-      </span>
+      <span>-</span>
 
       <span class="tamanho-preco">
         R$ 120,00
@@ -441,8 +360,6 @@
 
     </div>
 
-
-    <!-- QUANTIDADE -->
 
     <div class="quantidade">
 
@@ -461,45 +378,35 @@
     </div>
 
 
-    <!-- COR -->
-
-    <div class="outras-cores">
+    <div class="cor-area">
 
       <h2>
         Cor:
       </h2>
 
-      <div class="cor-selecionada">
+      <div class="cor-nome">
         Vermelho
       </div>
 
-      <div class="cores">
+      <div class="cor-thumb">
 
-        <div class="cor-thumb">
-
-          <img
-            src="1000219401.jpg"
-            alt="Vestido Ayla Vermelho"
-          >
-
-        </div>
+        <img
+          src="IMG-20260823-WA0061.jpg"
+          alt="Vestido Ayla Vermelho">
 
       </div>
 
     </div>
 
 
-    <!-- COMPRAR -->
-
     <button
       class="comprar"
-      onclick="comprarProduto()"
-    >
+      onclick="comprarProduto()">
+
       Comprar
+
     </button>
 
-
-    <!-- DETALHES -->
 
     <section class="detalhes">
 
@@ -519,7 +426,7 @@
 
       <p>
         <strong>Pix:</strong>
-        R$ 114,00
+        R$ 114,00 (5% OFF)
       </p>
 
       <p>
@@ -565,9 +472,9 @@
   <script>
 
     const fotos = [
-      "1000219401.jpg",
-      "1000219402.jpg",
-      "1000219403.jpg"
+      "IMG-20260823-WA0061.jpg",
+      "IMG-20260823-WA0063.jpg",
+      "IMG-20260823-WA0062.jpg"
     ];
 
     let quantidade = 0;
@@ -583,9 +490,7 @@
         document.querySelectorAll(".dot");
 
       dots.forEach(function(dot) {
-
         dot.classList.remove("ativo");
-
       });
 
       dots[numero].classList.add("ativo");
