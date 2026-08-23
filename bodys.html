@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Body Kim | DREIZZA</title>
 
   <style>
@@ -27,6 +28,8 @@
       display: block;
       max-width: 100%;
     }
+
+    /* CABEÇALHO */
 
     .topo {
       background: #fff;
@@ -53,6 +56,8 @@
       font-size: 25px;
     }
 
+    /* GALERIA */
+
     .galeria {
       width: 100%;
       background: #f5f5f5;
@@ -70,11 +75,13 @@
       object-position: center;
     }
 
+    /* BOLINHAS */
+
     .dots {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 17px;
+      gap: 20px;
       padding: 25px 10px 30px;
       background: #fff;
     }
@@ -95,6 +102,8 @@
       border: none;
       background: #000;
     }
+
+    /* PRODUTO */
 
     .produto {
       padding: 0 34px 60px;
@@ -122,6 +131,8 @@
       margin-bottom: 25px;
     }
 
+    /* PREÇO */
+
     .preco {
       font-size: 29px;
       font-weight: 700;
@@ -140,6 +151,8 @@
       color: #2a8c55;
       margin-bottom: 55px;
     }
+
+    /* TAMANHO */
 
     .titulo-opcao {
       margin: 0 0 6px;
@@ -161,6 +174,8 @@
       color: #f1a2b8;
     }
 
+    /* QUANTIDADE */
+
     .quantidade {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -181,6 +196,8 @@
       font-size: 18px;
       color: #777;
     }
+
+    /* CORES */
 
     .outras-cores {
       margin-bottom: 55px;
@@ -222,6 +239,8 @@
       object-fit: cover;
     }
 
+    /* COMPRAR */
+
     .comprar {
       width: 100%;
       border: none;
@@ -233,6 +252,8 @@
       cursor: pointer;
       margin-bottom: 35px;
     }
+
+    /* DETALHES */
 
     .detalhes {
       border-top: 1px solid #eee;
@@ -249,7 +270,10 @@
       color: #666;
     }
 
+    /* CELULAR */
+
     @media (max-width: 600px) {
+
       .topo {
         padding: 15px;
       }
@@ -287,48 +311,98 @@
 
 <body>
 
-  <header class="topo">
-    <a href="index.html" class="voltar">←</a>
+  <!-- CABEÇALHO -->
 
-    <a href="index.html">
-      <img src="IMG-20260801-WA0069(1).jpg" alt="DREIZZA" class="logo">
+  <header class="topo">
+
+    <a href="index.html" class="voltar">
+      ←
     </a>
 
-    <a href="index.html#carrinho" class="carrinho">🛒</a>
+    <a href="index.html">
+      <img
+        src="IMG-20260801-WA0069(1).jpg"
+        alt="DREIZZA"
+        class="logo"
+      >
+    </a>
+
+    <a href="index.html#carrinho" class="carrinho">
+      🛒
+    </a>
+
   </header>
 
+
+  <!-- GALERIA -->
+
   <section class="galeria">
+
     <div class="foto-principal">
+
       <img
-        src="body-kim-1.jpg"
+        src="IMG-20260823-WA0043.jpg"
         id="fotoPrincipal"
-        alt="Body Kim">
+        alt="Body Kim"
+      >
+
     </div>
+
   </section>
 
+
+  <!-- BOLINHAS -->
+
   <div class="dots">
+
     <span class="dot ativo" onclick="mudarFoto(0)"></span>
+
     <span class="dot" onclick="mudarFoto(1)"></span>
+
     <span class="dot" onclick="mudarFoto(2)"></span>
+
     <span class="dot" onclick="mudarFoto(3)"></span>
+
     <span class="dot" onclick="mudarFoto(4)"></span>
+
   </div>
+
+
+  <!-- PRODUTO -->
 
   <main class="produto">
 
-    <h1>Body Kim</h1>
+    <h1>
+      Body Kim
+    </h1>
 
     <div class="referencia">
       REF: DREIZZA-BODY-KIM-001
     </div>
 
+
+    <!-- DESCRIÇÃO -->
+
     <div class="descricao">
-      O body Kim é confeccionado em poliamida, proporcionando conforto e um caimento impecável.
+
+      O Body Kim é confeccionado em poliamida,
+      proporcionando conforto e um caimento impecável.
+
       <br><br>
-      Sua amarração no pescoço permite diferentes formas de uso, criando novas possibilidades para a mesma peça.
+
+      Sua amarração no pescoço permite diferentes
+      formas de uso, criando novas possibilidades
+      para a mesma peça.
+
       <br><br>
-      Versátil, moderno e atemporal, é uma peça indispensável no guarda-roupa.
+
+      Versátil, moderno e atemporal, é uma peça
+      indispensável no guarda-roupa.
+
     </div>
+
+
+    <!-- PREÇO -->
 
     <div class="preco">
       R$ 78,00
@@ -342,140 +416,354 @@
       R$ 74,10 no Pix (5% OFF)
     </p>
 
+
+    <!-- TAMANHO -->
+
     <h2 class="titulo-opcao">
       Tamanho
     </h2>
 
     <div class="tamanho">
-      <span>Único</span>
-      <span>-</span>
-      <span class="tamanho-preco">R$ 78,00</span>
+
+      <span>
+        Único
+      </span>
+
+      <span>
+        -
+      </span>
+
+      <span class="tamanho-preco">
+        R$ 78,00
+      </span>
+
     </div>
+
+
+    <!-- QUANTIDADE -->
 
     <div class="quantidade">
-      <button onclick="diminuir()">−</button>
-      <span id="quantidade">0</span>
-      <button onclick="aumentar()">+</button>
+
+      <button onclick="diminuir()">
+        −
+      </button>
+
+      <span id="quantidade">
+        0
+      </span>
+
+      <button onclick="aumentar()">
+        +
+      </button>
+
     </div>
 
+
+    <!-- OUTRAS CORES -->
+
     <div class="outras-cores">
-      <h2>Outras Cores:</h2>
+
+      <h2>
+        Outras Cores:
+      </h2>
 
       <div class="cor-selecionada">
-        Cor selecionada: <strong id="nomeCor">Preto</strong>
+
+        Cor selecionada:
+
+        <strong id="nomeCor">
+          Preto
+        </strong>
+
       </div>
+
 
       <div class="cores">
 
+
+        <!-- PRETO -->
+
         <button
           class="cor-thumb selecionada"
-          onclick="selecionarCor(this, 'Preto', 'body-kim-1.jpg')">
-          <img src="body-kim-1.jpg" alt="Body Kim Preto">
+          onclick="selecionarCor(
+            this,
+            'Preto',
+            'IMG-20260823-WA0043.jpg'
+          )"
+        >
+
+          <img
+            src="IMG-20260823-WA0043.jpg"
+            alt="Body Kim Preto"
+          >
+
         </button>
+
+
+        <!-- CINZA -->
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Cinza', 'body-kim-3.jpg')">
-          <img src="body-kim-3.jpg" alt="Body Kim Cinza">
+          onclick="selecionarCor(
+            this,
+            'Cinza',
+            'IMG-20260823-WA0045.jpg'
+          )"
+        >
+
+          <img
+            src="IMG-20260823-WA0045.jpg"
+            alt="Body Kim Cinza"
+          >
+
         </button>
+
+
+        <!-- VERMELHO -->
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Vermelho', 'body-kim-4.jpg')">
-          <img src="body-kim-4.jpg" alt="Body Kim Vermelho">
+          onclick="selecionarCor(
+            this,
+            'Vermelho',
+            'IMG-20260823-WA0044.jpg'
+          )"
+        >
+
+          <img
+            src="IMG-20260823-WA0044.jpg"
+            alt="Body Kim Vermelho"
+          >
+
         </button>
+
+
+        <!-- VINHO -->
 
         <button
           class="cor-thumb"
-          onclick="selecionarCor(this, 'Vinho', 'body-kim-5.jpg')">
-          <img src="body-kim-5.jpg" alt="Body Kim Vinho">
+          onclick="selecionarCor(
+            this,
+            'Vinho',
+            'IMG-20260823-WA0046.jpg'
+          )"
+        >
+
+          <img
+            src="IMG-20260823-WA0046.jpg"
+            alt="Body Kim Vinho"
+          >
+
         </button>
 
       </div>
+
     </div>
 
-    <button class="comprar" onclick="comprarProduto()">
+
+    <!-- COMPRAR -->
+
+    <button
+      class="comprar"
+      onclick="comprarProduto()"
+    >
       Comprar
     </button>
 
-    <section class="detalhes">
-      <h2>Detalhes do produto</h2>
 
-      <p><strong>Preço:</strong> R$ 78,00</p>
-      <p><strong>Parcelamento:</strong> 2x de R$ 39,00 sem juros</p>
-      <p><strong>Pix:</strong> R$ 74,10 (5% OFF)</p>
-      <p><strong>Cores e estoques:</strong> Preto 1, Vermelho 1, Vinho 1, Cinza 1</p>
-      <p><strong>Material:</strong> Poliamida</p>
-      <p><strong>Peso:</strong> 120 g</p>
-      <p><strong>Largura:</strong> 15 cm</p>
-      <p><strong>Comprimento:</strong> 20 cm</p>
-      <p><strong>Altura:</strong> 5 cm</p>
+    <!-- DETALHES -->
+
+    <section class="detalhes">
+
+      <h2>
+        Detalhes do produto
+      </h2>
+
+      <p>
+        <strong>Preço:</strong>
+        R$ 78,00
+      </p>
+
+      <p>
+        <strong>Parcelamento:</strong>
+        2x de R$ 39,00 sem juros
+      </p>
+
+      <p>
+        <strong>Pix:</strong>
+        R$ 74,10 (5% OFF)
+      </p>
+
+      <p>
+        <strong>Cores e estoques:</strong>
+        Preto 1, Vermelho 1, Vinho 1 e Cinza 1
+      </p>
+
+      <p>
+        <strong>Material:</strong>
+        Poliamida
+      </p>
+
+      <p>
+        <strong>Peso:</strong>
+        120 g
+      </p>
+
+      <p>
+        <strong>Largura:</strong>
+        15 cm
+      </p>
+
+      <p>
+        <strong>Comprimento:</strong>
+        20 cm
+      </p>
+
+      <p>
+        <strong>Altura:</strong>
+        5 cm
+      </p>
+
     </section>
 
   </main>
 
+
   <script>
+
+    /* NOMES REAIS DAS FOTOS NO GITHUB */
+
     const fotos = [
-      "body-kim-1.jpg",
-      "body-kim-2.jpg",
-      "body-kim-3.jpg",
-      "body-kim-4.jpg",
-      "body-kim-5.jpg"
+
+      "IMG-20260823-WA0043.jpg",
+
+      "IMG-20260823-WA0047.jpg",
+
+      "IMG-20260823-WA0045.jpg",
+
+      "IMG-20260823-WA0044.jpg",
+
+      "IMG-20260823-WA0046.jpg"
+
     ];
 
+
     let quantidade = 0;
+
     let corSelecionada = "Preto";
 
-    function mudarFoto(numero) {
-      document.getElementById("fotoPrincipal").src = fotos[numero];
 
-      const dots = document.querySelectorAll(".dot");
+    function mudarFoto(numero) {
+
+      document
+        .getElementById("fotoPrincipal")
+        .src = fotos[numero];
+
+
+      const dots =
+        document.querySelectorAll(".dot");
+
+
       dots.forEach(function(dot) {
+
         dot.classList.remove("ativo");
+
       });
+
 
       dots[numero].classList.add("ativo");
+
     }
+
 
     function aumentar() {
+
       quantidade++;
-      document.getElementById("quantidade").innerText = quantidade;
+
+      document
+        .getElementById("quantidade")
+        .innerText = quantidade;
+
     }
+
 
     function diminuir() {
+
       if (quantidade > 0) {
+
         quantidade--;
+
       }
-      document.getElementById("quantidade").innerText = quantidade;
+
+      document
+        .getElementById("quantidade")
+        .innerText = quantidade;
+
     }
 
-    function selecionarCor(botao, cor, foto) {
+
+    function selecionarCor(
+      botao,
+      cor,
+      foto
+    ) {
+
       corSelecionada = cor;
 
-      document.getElementById("nomeCor").innerText = cor;
-      document.getElementById("fotoPrincipal").src = foto;
 
-      document.querySelectorAll(".cor-thumb").forEach(function(item) {
-        item.classList.remove("selecionada");
-      });
+      document
+        .getElementById("nomeCor")
+        .innerText = cor;
+
+
+      document
+        .getElementById("fotoPrincipal")
+        .src = foto;
+
+
+      document
+        .querySelectorAll(".cor-thumb")
+        .forEach(function(item) {
+
+          item.classList.remove("selecionada");
+
+        });
+
 
       botao.classList.add("selecionada");
+
     }
+
 
     function comprarProduto() {
+
       if (quantidade === 0) {
+
         quantidade = 1;
-        document.getElementById("quantidade").innerText = 1;
+
+        document
+          .getElementById("quantidade")
+          .innerText = 1;
+
       }
 
+
       alert(
+
         "Produto adicionado!\n\n" +
+
         "Body Kim\n" +
+
         "Cor: " + corSelecionada + "\n" +
+
         "Quantidade: " + quantidade + "\n" +
+
         "Valor unitário: R$ 78,00"
+
       );
+
     }
+
   </script>
 
 </body>
