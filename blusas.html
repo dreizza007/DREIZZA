@@ -1,1 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blusa Bel | DREIZZA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .topo {
+      background: #fff;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+
+    .voltar {
+      font-size: 28px;
+      width: 45px;
+    }
+
+    .logo {
+      width: 170px;
+      max-width: 55%;
+    }
+
+    .carrinho {
+      width: 45px;
+      text-align: right;
+      font-size: 25px;
+    }
+
+    .galeria {
+      width: 100%;
+      background: #f5f5f5;
+    }
+
+    .foto-principal {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .foto-principal img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 25px 0 30px;
+      background: #fff;
+    }
+
+    .dot {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #aaa;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+
+    .dot.ativo {
+      width: 36px;
+      height: 17px;
+      border-radius: 20px;
+      border: none;
+      background: #000;
+    }
+
+    .produto {
+      padding: 0 34px 60px;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .produto h1 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .referencia {
+      font-size: 19px;
+      color: #777;
+      margin-bottom: 48px;
+    }
+
+    .descricao {
+      font-size: 19px;
+      line-height: 1.55;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .preco {
+      font-size: 29px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .parcelamento {
+      color: #777;
+      font-size: 17px;
+      margin: 0 0 6px;
+    }
+
+    .pix {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2a8c55;
+      margin-bottom: 55px;
+    }
+
+    .titulo-opcao {
+      margin: 0 0 6px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .tamanho {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .tamanho-preco {
+      color: #f1a2b8;
+    }
+
+    .quantidade {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      text-align: center;
+      margin: 15px 0 70px;
+    }
+
+    .quantidade button {
+      border: none;
+      background: transparent;
+      font-size: 34px;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .quantidade span {
+      font-size: 18px;
+      color: #777;
+    }
+
+    .outras-cores {
+      margin-bottom: 55px;
+    }
+
+    .outras-cores h2 {
+      font-size: 23px;
+      margin: 0 0 14px;
+    }
+
+    .cor-selecionada {
+      color: #777;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .cores {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cor-thumb {
+      width: 70px;
+      height: 70px;
+      border: 2px solid #f09db4;
+      padding: 2px;
+      background: #fff;
+    }
+
+    .cor-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .comprar {
+      width: 100%;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 22px 15px;
+      cursor: pointer;
+      margin-bottom: 35px;
+    }
+
+    .detalhes {
+      border-top: 1px solid #eee;
+      padding-top: 30px;
+    }
+
+    .detalhes h2 {
+      font-size: 23px;
+    }
+
+    .detalhes p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .topo {
+        padding: 15px;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .foto-principal img {
+        height: 500px;
+      }
+
+      .produto {
+        padding: 0 34px 45px;
+      }
+
+      .produto h1 {
+        font-size: 32px;
+      }
+
+      .referencia {
+        font-size: 18px;
+      }
+
+      .descricao {
+        font-size: 18px;
+      }
+
+      .preco {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+
+    <a href="index.html" class="voltar">
+      ←
+    </a>
+
+    <a href="index.html">
+      <img
+        src="IMG-20260801-WA0069(1).jpg"
+        alt="DREIZZA"
+        class="logo"
+      >
+    </a>
+
+    <a href="index.html#carrinho" class="carrinho">
+      🛒
+    </a>
+
+  </header>
+
+
+  <section class="galeria">
+
+    <div class="foto-principal">
+
+      <img
+        src="1000219404.jpg"
+        id="fotoPrincipal"
+        alt="Blusa Bel"
+      >
+
+    </div>
+
+  </section>
+
+
+  <div class="dots">
+
+    <span
+      class="dot ativo"
+      onclick="mudarFoto(0)"
+    ></span>
+
+    <span
+      class="dot"
+      onclick="mudarFoto(1)"
+    ></span>
+
+  </div>
+
+
+  <main class="produto">
+
+    <h1>
+      Blusa Bel
+    </h1>
+
+    <div class="referencia">
+      REF: DREIZZA-BLUSA-BEL-001
+    </div>
+
+
+    <div class="descricao">
+
+      A Blusa Bel é confeccionada em poliamida,
+      com caimento impecável ao corpo.
+
+      <br><br>
+
+      Prática, versátil e atemporal, é aquela peça
+      curinga que salva na correria do dia a dia,
+      combina facilmente com diferentes produções
+      e transita do básico ao mais elaborado.
+
+    </div>
+
+
+    <div class="preco">
+      R$ 70,00
+    </div>
+
+    <p class="parcelamento">
+      2x de R$ 35,00 sem juros
+    </p>
+
+    <p class="pix">
+      R$ 66,50 no Pix (5% OFF)
+    </p>
+
+
+    <h2 class="titulo-opcao">
+      Tamanho
+    </h2>
+
+    <div class="tamanho">
+
+      <span>
+        Único
+      </span>
+
+      <span>
+        -
+      </span>
+
+      <span class="tamanho-preco">
+        R$ 70,00
+      </span>
+
+    </div>
+
+
+    <div class="quantidade">
+
+      <button onclick="diminuir()">
+        −
+      </button>
+
+      <span id="quantidade">
+        0
+      </span>
+
+      <button onclick="aumentar()">
+        +
+      </button>
+
+    </div>
+
+
+    <div class="outras-cores">
+
+      <h2>
+        Cor:
+      </h2>
+
+      <div class="cor-selecionada">
+        Preto
+      </div>
+
+      <div class="cores">
+
+        <div class="cor-thumb">
+
+          <img
+            src="1000219404.jpg"
+            alt="Blusa Bel Preta"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="comprar"
+      onclick="comprarProduto()"
+    >
+      Comprar
+    </button>
+
+
+    <section class="detalhes">
+
+      <h2>
+        Detalhes do produto
+      </h2>
+
+      <p>
+        <strong>Preço:</strong>
+        R$ 70,00
+      </p>
+
+      <p>
+        <strong>Parcelamento:</strong>
+        2x de R$ 35,00 sem juros
+      </p>
+
+      <p>
+        <strong>Pix:</strong>
+        R$ 66,50 (5% OFF)
+      </p>
+
+      <p>
+        <strong>Cor:</strong>
+        Preto
+      </p>
+
+      <p>
+        <strong>Estoque:</strong>
+        3 unidades
+      </p>
+
+      <p>
+        <strong>Material:</strong>
+        Poliamida
+      </p>
+
+      <p>
+        <strong>Peso:</strong>
+        190 g
+      </p>
+
+      <p>
+        <strong>Altura:</strong>
+        5 cm
+      </p>
+
+      <p>
+        <strong>Largura:</strong>
+        16 cm
+      </p>
+
+      <p>
+        <strong>Comprimento:</strong>
+        20 cm
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const fotos = [
+      "1000219404.jpg",
+      "1000219405.jpg"
+    ];
+
+    let quantidade = 0;
+
+
+    function mudarFoto(numero) {
+
+      document
+        .getElementById("fotoPrincipal")
+        .src = fotos[numero];
+
+      const dots =
+        document.querySelectorAll(".dot");
+
+      dots.forEach(function(dot) {
+
+        dot.classList.remove("ativo");
+
+      });
+
+      dots[numero].classList.add("ativo");
+
+    }
+
+
+    function aumentar() {
+
+      quantidade++;
+
+      document
+        .getElementById("quantidade")
+        .innerText = quantidade;
+
+    }
+
+
+    function diminuir() {
+
+      if (quantidade > 0) {
+
+        quantidade--;
+
+      }
+
+      document
+        .getElementById("quantidade")
+        .innerText = quantidade;
+
+    }
+
+
+    function comprarProduto() {
+
+      if (quantidade === 0) {
+
+        quantidade = 1;
+
+        document
+          .getElementById("quantidade")
+          .innerText = 1;
+
+      }
+
+      alert(
+        "Produto adicionado!\n\n" +
+        "Blusa Bel\n" +
+        "Cor: Preto\n" +
+        "Quantidade: " + quantidade + "\n" +
+        "Valor unitário: R$ 70,00"
+      );
+
+    }
+
+  </script>
+
+</body>
+
+</html>
