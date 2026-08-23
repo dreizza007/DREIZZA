@@ -45,8 +45,8 @@
 
     .header {
       width: 100%;
-      height: 120px;
-      padding: 10px 18px;
+      height: 115px;
+      padding: 8px 18px;
       background: #fff;
       display: flex;
       align-items: center;
@@ -57,14 +57,14 @@
     .menu-btn {
       border: 0;
       background: transparent;
-      font-size: 34px;
+      font-size: 32px;
       cursor: pointer;
       width: 50px;
       color: #111;
     }
 
     .logo {
-      width: 220px;
+      width: 210px;
       max-width: 55%;
       height: auto;
       max-height: 90px;
@@ -73,12 +73,12 @@
     }
 
     .header-icons {
-      min-width: 70px;
+      min-width: 75px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 12px;
-      font-size: 28px;
+      font-size: 27px;
     }
 
     .header-icons a {
@@ -94,8 +94,8 @@
       position: absolute;
       top: -12px;
       right: -12px;
-      width: 25px;
-      height: 25px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       background: #9bd9af;
       color: #fff;
@@ -114,8 +114,8 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 18px;
-      padding: 10px 10px 15px;
+      gap: 17px;
+      padding: 8px 10px 14px;
       background: #fff;
       border-bottom: 1px solid #eee;
     }
@@ -126,10 +126,6 @@
       font-size: 15px;
     }
 
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
     /* =========================
        BANNER COM VÍDEO
     ========================= */
@@ -137,7 +133,7 @@
     .banner {
       position: relative;
       width: 100%;
-      height: 720px;
+      height: 700px;
       background: #000;
       overflow: hidden;
       display: flex;
@@ -172,13 +168,13 @@
 
     .banner h1 {
       margin: 0 0 15px;
-      font-size: 54px;
+      font-size: 48px;
       color: #fff;
     }
 
     .banner p {
       margin: 0 0 28px;
-      font-size: 22px;
+      font-size: 21px;
       color: #fff;
     }
 
@@ -194,18 +190,157 @@
     }
 
     /* =========================
-       PRODUTOS
+       FAIXA DE INFORMAÇÕES
     ========================= */
 
-    .produtos {
-      padding: 60px 20px;
+    .info-bar {
+      background: #7fd0eb;
+      color: #111;
+      text-align: center;
+      padding: 11px 5px;
+      font-size: 14px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* =========================
+       BENEFÍCIOS
+    ========================= */
+
+    .beneficios {
+      background: #fff;
+      padding: 42px 20px 25px;
+    }
+
+    .beneficios-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 40px;
+    }
+
+    .beneficio-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .beneficio-icon {
+      width: 48px;
+      text-align: center;
+      font-size: 34px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .beneficio-texto h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #111;
+    }
+
+    .beneficio-texto p {
+      margin: 4px 0 0;
+      font-size: 17px;
+      color: #777;
+    }
+
+    /* =========================
+       CATEGORIAS
+    ========================= */
+
+    .categorias {
+      background: #fff;
+      padding: 20px 15px 45px;
+      text-align: center;
+    }
+
+    .categorias-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .categoria-item {
+      text-align: center;
+    }
+
+    .categoria-foto {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .categoria-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .categoria-item h3 {
+      margin: 0;
+      font-size: 22px;
+      color: #666;
+      font-weight: bold;
+    }
+
+    /* =========================
+       BOLINHAS
+    ========================= */
+
+    .categoria-dots {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .categoria-dots span {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 1px solid #777;
+      background: #bbb;
+      display: block;
+    }
+
+    .categoria-dots .ativo {
+      width: 35px;
+      height: 17px;
+      border-radius: 20px;
+      border: none;
+      background: #000;
+    }
+
+    /* =========================
+       MAIS VENDIDOS
+    ========================= */
+
+    .mais-vendidos {
+      padding: 35px 20px 60px;
       text-align: center;
       background: #fff;
     }
 
-    .produtos h2 {
-      margin: 0 0 35px;
-      font-size: 38px;
+    .mais-vendidos h2 {
+      margin: 0;
+      font-size: 40px;
+      color: #111;
+    }
+
+    .mais-vendidos .subtitulo {
+      margin: 15px 0 35px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #6a6a6a;
     }
 
     .produtos-grid {
@@ -213,34 +348,43 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
     .produto {
-      background: #f6f6f6;
-      padding: 40px 20px;
-      border-radius: 8px;
+      background: #fafafa;
+      overflow: hidden;
     }
 
-    .produto h3 {
-      margin-top: 0;
-      font-size: 21px;
+    .produto-imagem {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #eee;
+      overflow: hidden;
     }
 
-    .produto p {
+    .produto-imagem img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .produto-info {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .produto-info h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+
+    .produto-info p {
+      margin: 0;
       color: #555;
-      line-height: 1.5;
-    }
-
-    .produto a {
-      display: inline-block;
-      margin-top: 10px;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      padding: 13px 22px;
-      border-radius: 5px;
+      font-size: 16px;
     }
 
     /* =========================
@@ -248,40 +392,30 @@
     ========================= */
 
     .promocoes {
-      padding: 70px 20px;
+      padding: 60px 20px;
       text-align: center;
-      background: #f3f3f3;
+      background: #f4f4f4;
     }
 
     .promocoes h2 {
-      margin-top: 0;
-      font-size: 36px;
+      margin: 0 0 15px;
+      font-size: 34px;
     }
 
     .promocoes p {
-      font-size: 18px;
       color: #555;
+      font-size: 18px;
     }
 
     .promocoes a {
       display: inline-block;
       margin-top: 15px;
+      padding: 14px 30px;
       background: #000;
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      padding: 15px 30px;
       border-radius: 5px;
-    }
-
-    /* =========================
-       CARRINHO
-    ========================= */
-
-    .carrinho-section {
-      padding: 60px 20px;
-      text-align: center;
-      background: #fff;
+      font-weight: bold;
     }
 
     /* =========================
@@ -312,77 +446,29 @@
       }
 
       .header {
-        height: 115px;
-        padding: 8px 12px;
+        height: 105px;
+        padding: 7px 10px;
       }
 
       .menu-btn {
-        width: 42px;
-        font-size: 30px;
+        width: 40px;
+        font-size: 29px;
       }
 
       .logo {
-        width: 210px;
+        width: 190px;
         max-width: 62%;
       }
 
       .header-icons {
         min-width: 65px;
-        gap: 9px;
+        gap: 8px;
         font-size: 25px;
       }
 
       .nav {
-        gap: 14px;
-        padding: 9px 8px 14px;
-      }
-
-      .nav a {
-        font-size: 14px;
-      }
-
-      .banner {
-        height: 700px;
-      }
-
-      .banner h1 {
-        font-size: 46px;
-      }
-
-      .banner p {
-        font-size: 20px;
-      }
-
-      .banner-button {
-        font-size: 17px;
-        padding: 17px 34px;
-      }
-
-      .produtos-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .produtos {
-        padding: 50px 15px;
-      }
-
-      .produtos h2 {
-        font-size: 36px;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      .header {
-        height: 105px;
-      }
-
-      .logo {
-        width: 190px;
-      }
-
-      .nav {
-        gap: 10px;
+        gap: 12px;
+        padding: 8px 7px 12px;
       }
 
       .nav a {
@@ -394,11 +480,105 @@
       }
 
       .banner h1 {
-        font-size: 40px;
+        font-size: 42px;
       }
 
       .banner p {
         font-size: 18px;
+      }
+
+      .banner-button {
+        font-size: 17px;
+        padding: 17px 32px;
+      }
+
+      .beneficios {
+        padding: 35px 18px 25px;
+      }
+
+      .beneficios-grid {
+        gap: 25px 15px;
+      }
+
+      .beneficio-item {
+        gap: 8px;
+      }
+
+      .beneficio-icon {
+        width: 38px;
+        font-size: 27px;
+      }
+
+      .beneficio-texto h3 {
+        font-size: 16px;
+      }
+
+      .beneficio-texto p {
+        font-size: 14px;
+      }
+
+      .categorias-grid {
+        gap: 12px;
+      }
+
+      .categoria-foto {
+        width: 105px;
+        height: 105px;
+      }
+
+      .categoria-item h3 {
+        font-size: 17px;
+      }
+
+      .categoria-dots {
+        gap: 48px;
+        margin-top: 30px;
+      }
+
+      .categoria-dots span {
+        width: 16px;
+        height: 16px;
+      }
+
+      .categoria-dots .ativo {
+        width: 34px;
+        height: 16px;
+      }
+
+      .mais-vendidos {
+        padding: 35px 15px 50px;
+      }
+
+      .mais-vendidos h2 {
+        font-size: 38px;
+      }
+
+      .mais-vendidos .subtitulo {
+        font-size: 18px;
+      }
+
+      .produtos-grid {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+
+      .categoria-foto {
+        width: 95px;
+        height: 95px;
+      }
+
+      .categoria-item h3 {
+        font-size: 16px;
+      }
+
+      .beneficio-texto h3 {
+        font-size: 15px;
+      }
+
+      .beneficio-texto p {
+        font-size: 13px;
       }
     }
 
@@ -461,7 +641,7 @@
   </nav>
 
 
-  <!-- BANNER COM VÍDEO -->
+  <!-- BANNER -->
 
   <section class="banner" id="inicio">
 
@@ -503,58 +683,188 @@
   </section>
 
 
-  <!-- PRODUTOS -->
+  <!-- FAIXA -->
+
+  <div class="info-bar">
+    PEDIDO MÍNIMO R$299 &nbsp;&nbsp; | &nbsp;&nbsp;
+    SUPORTE DE QUALIDADE &nbsp;&nbsp; | &nbsp;&nbsp;
+    ENVIO RÁPIDO
+  </div>
+
+
+  <!-- BENEFÍCIOS -->
+
+  <section class="beneficios">
+
+    <div class="beneficios-grid">
+
+      <div class="beneficio-item">
+
+        <div class="beneficio-icon">
+          🛍️
+        </div>
+
+        <div class="beneficio-texto">
+          <h3>Pedido Mínimo</h3>
+          <p>De R$299,00 🔥</p>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio-item">
+
+        <div class="beneficio-icon">
+          🚚
+        </div>
+
+        <div class="beneficio-texto">
+          <h3>Envio Rápido</h3>
+          <p>Pediu, Enviou! 💗</p>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio-item">
+
+        <div class="beneficio-icon">
+          🔒
+        </div>
+
+        <div class="beneficio-texto">
+          <h3>Segurança</h3>
+          <p>Site Seguro 💚</p>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio-item">
+
+        <div class="beneficio-icon">
+          🎧
+        </div>
+
+        <div class="beneficio-texto">
+          <h3>Suporte</h3>
+          <p>Humanizado 💙</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIAS -->
+
+  <section class="categorias">
+
+    <div class="categorias-grid">
+
+      <div class="categoria-item">
+
+        <div class="categoria-foto">
+          <img
+            src="IMG-20260801-WA0069(1).jpg"
+            alt="Vestidos"
+          >
+        </div>
+
+        <h3>Vestidos</h3>
+
+      </div>
+
+
+      <div class="categoria-item">
+
+        <div class="categoria-foto">
+          <img
+            src="IMG-20260801-WA0069(1).jpg"
+            alt="Cropped'z"
+          >
+        </div>
+
+        <h3>Cropped'z</h3>
+
+      </div>
+
+
+      <div class="categoria-item">
+
+        <div class="categoria-foto">
+          <img
+            src="IMG-20260801-WA0069(1).jpg"
+            alt="Body"
+          >
+        </div>
+
+        <h3>Body</h3>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOLINHAS -->
+
+    <div class="categoria-dots">
+      <span class="ativo"></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- MAIS VENDIDOS -->
 
   <section
-    class="produtos"
+    class="mais-vendidos"
     id="produtos"
   >
 
-    <h2>Produtos</h2>
+    <h2>Mais Vendidos</h2>
+
+    <p class="subtitulo">
+      Os queridinhos do mês na DREIZZA 🔥
+    </p>
+
 
     <div class="produtos-grid">
 
       <div class="produto">
 
-        <h3>Novidades</h3>
+        <div class="produto-imagem">
+          <img
+            src="IMG-20260801-WA0069(1).jpg"
+            alt="Produto DREIZZA"
+          >
+        </div>
 
-        <p>
-          Confira os novos lançamentos da DREIZZA.
-        </p>
-
-        <a href="#">
-          VER PRODUTOS
-        </a>
-
-      </div>
-
-
-      <div class="produto">
-
-        <h3>Mais vendidos</h3>
-
-        <p>
-          Conheça as peças favoritas das nossas clientes.
-        </p>
-
-        <a href="#">
-          VER PRODUTOS
-        </a>
+        <div class="produto-info">
+          <h3>Produto DREIZZA</h3>
+          <p>Confira nossas novidades</p>
+        </div>
 
       </div>
 
 
       <div class="produto">
 
-        <h3>Nova coleção</h3>
+        <div class="produto-imagem">
+          <img
+            src="IMG-20260801-WA0069(1).jpg"
+            alt="Produto DREIZZA"
+          >
+        </div>
 
-        <p>
-          Descubra as novas peças disponíveis.
-        </p>
-
-        <a href="#">
-          VER COLEÇÃO
-        </a>
+        <div class="produto-info">
+          <h3>Produto DREIZZA</h3>
+          <p>Confira nossas novidades</p>
+        </div>
 
       </div>
 
@@ -586,8 +896,8 @@
   <!-- CARRINHO -->
 
   <section
-    class="carrinho-section"
     id="carrinho"
+    style="padding:60px 20px;text-align:center;"
   >
 
     <h2>Carrinho</h2>
